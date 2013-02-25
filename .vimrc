@@ -1,29 +1,5 @@
-colorscheme BusyBee
-
-" EDIT
-" ==============================================
-syntax on
-
-set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-set autoindent
-set copyindent
-set nowrap
-set number
-set cursorline
-set history=1000
-set undolevels=1000
-set pastetoggle=<F2>
-set mouse=a
-
-" auto load files if vim detects they have been changed outside of Vim
-set autoread
-set hidden
-
-" ignore some files when autocomplete
-set wildignore=*.swp,*.bak,*.pyc,*.class
+" no vi compatibility
+set nocp
 
 
 " PLUGINS
@@ -36,20 +12,91 @@ let $MYPLUGINS = '~/.vim/plugins.vim'
 exe 'so '.$MYPLUGINS
 
 
+
+" GVIMRC
+" ==============================================
+
+" define gvimrc here
+if has('gui_running')
+  if has('mac')
+    set guifont=Monaco:h12
+  else
+    set guifont=Courier_New:h10:cANSI
+  endif
+endif
+
+
+
+" EDITION
+" ==============================================
+
+colorscheme BusyBee
+
+" basic edition stuff on
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+" use unix as standard file type
+set fileformats=unix,dos,mac
+
+" always set autoindenting on
+set autoindent
+
+" good when starting a new line
+set smartindent
+
+" fill tabs with spaces
+set expandtab
+
+" 2 spaces everywhere please!
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+" copy the previous indentation on autoindenting
+set copyindent
+
+" don't wrap lines
+set nowrap
+
+" show line numbers
+set number
+
+" highlight current line
+set cursorline
+
+" auto load files when hanged outside of Vim
+set autoread
+
+" allow hidden buffers
+set hidden
+
 " highlight trailing whitespace (and tabs)
 " http://nvie.com/posts/how-i-boosted-my-vim/
 set list
-set listchars=tab:>-,trail:·
+set listchars=tab:▸\ ,trail:·
 
 " color trailing whitespace
-highlight TrailWhitespace ctermbg=red guibg=#f62c73
+hi TrailWhitespace ctermbg=198 guibg=#f62c73
 match TrailWhitespace /\s\+$\| \+\ze\t/
+
+" use many undos
+set undolevels=1000
 
 " do not syntax highlight too long lines
 set synmaxcol=500
 
+" keep selection to indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
 " join lines with cursor staying in place
-nnoremap <silent> J :let p=getpos('.')<bar>join<bar>call setpos('.', p)<CR>
+nnoremap J mzJ`z
+
+" set mouse
+set mouse=a
 
 
 
@@ -61,53 +108,119 @@ set scrolloff=3
 set sidescrolloff=5
 
 " scroll viewport faster
-nnoremap <C-e> 5<C-e>
-nnoremap <C-y> 5<C-y>
-vnoremap <C-e> 5<C-e>
-vnoremap <C-y> 5<C-y>
+nnoremap <c-e> 5<c-e>
+nnoremap <c-y> 5<c-y>
+vnoremap <c-e> 5<c-e>
+vnoremap <c-y> 5<c-y>
+
+" keep cursor in position when moving around
+set nostartofline
 
 
-
-" SPELLING
+" MAPPINGS
 " ==============================================
 
-" fix my common spelling mistakes
-iab slef self
-iab tihs this
-iab functino function
-iab getElementByID getElementById
+" change the mapleader from \ to ,
+let mapleader=","
 
+" - is the new : (i.e. -w to save) faster instead of shift+:
+nnoremap - :
 
+" easy :bd
+map <silent> <leader>bd :bd<cr>
+
+" delete all buffers
+map <silent> <leader>wp :1,9999bwipeout<cr>
 
 " quick save
-map <leader>w :w<CR>
+map <leader>w :w<cr>
 
-" select all and keep cursor in place
+" select all
 nmap <leader>a ggVG
 
 " force save of files with root permission
 com! W :w !sudo tee %
-map <leader>W :W<CR>
+map <leader>W :W<cr>
 
 " maximize vim window
-com! MAX :let &lines=500<bar>let &columns=500
-map <leader>m :MAX<CR>
+map <leader>m :let &lines=500<bar>let &columns=500<cr>
+
+" minimize vim window
+map <leader>n :let &lines=35<bar>let &columns=140<bar>winpos 150 110<cr>
+
+" make j/k move to next visual line instead of pysical line
+" http://yubinkim.com/?p=6
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
+
+" easy move lines in all modes
+imap <a-j> <esc>mz:m+<cr>`zi
+imap <a-k> <esc>mz:m-2<cr>`zi
+nmap <a-j> mz:m+<cr>`z
+nmap <a-k> mz:m-2<cr>`z
+vmap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " easy add new line in normal mode
-nnoremap <CR> o<ESC>k
+" without moving the cursor
+nnoremap <cr> mzo<esc>`z
 
 " easy remove line in normal mode
 " (copy to _ for not losing the last register)
 nnoremap <BS> "_dd
 
-" easey copy/paste from/to system clipboard
+" easy copy/paste from/to system clipboard
 map <leader>yy "*y
 map <leader>pp "*p
 map <leader>YY "*Y
 map <leader>PP "*P
 
-" list current dir files
-nmap <C-p> :e <C-d>
+" list current dir files and folders
+nmap <c-p> :e <c-d>
+
+" quick install new bundles
+map <leader>bi :BundleInstall<cr>
+
+" easy open buffer in new tab
+map <leader>te :ls<cr>:tabedit #
+
+" guizoom.vim mappings
+map <leader>+ :ZoomIn<cr>
+map <leader>- :ZoomOut<cr>
+map <leader>= :ZoomReset<cr>
+
+" function to yank lines and keep cursor in position
+function! YankInPlace()
+  " save last cursor position
+  let p=getpos('.')
+  " yank current visual selection to reg x
+  normal gv"xy
+  " set last cursor position
+  call setpos('.', p)
+endfunction
+
+" mapping to YankInPlace
+"vnoremap <silent> Y :call YankInPlace()<cr>
+
+
+" SNIPPETS
+" ==============================================
+
+" edit desired snippet of snipMate
+function! EditSnippet()
+  call inputsave()
+  let type = input('Enter snippets lang ')
+  call inputrestore()
+  if type == 'js'
+    let snippetsFile = 'javascript'
+  endif
+  exe ':e ~/.vim/snippets/' . snippetsFile . '.snippets'
+endfunction
+
+" fast snippet edit
+map <silent> <leader>se :call EditSnippet()<cr>
 
 
 " SPLITS
@@ -118,17 +231,21 @@ nmap <C-p> :e <C-d>
 set splitright splitbelow
 
 " equally resize splits on window resize
-au! VimResized * wincmd=
+au! VimResized * :wincmd =
 
 " only have cursorline in current window
 au! WinLeave * set nocursorline
 au! WinEnter * set cursorline
 
 " move splits around
-nnoremap <leader>sl <C-w><S-h>
-nnoremap <leader>sr <C-w><S-l>
-nnoremap <leader>st <C-w><S-k>
-nnoremap <leader>sb <C-w><S-j>
+nnoremap <leader>sl <c-w><s-h>
+nnoremap <leader>sr <c-w><s-l>
+nnoremap <leader>st <c-w><s-k>
+nnoremap <leader>sb <c-w><s-j>
+
+" open all buffers in vertical split
+map <silent> <leader>vb :vertical :ball<cr>
+
 
 
 " SEARCH
@@ -150,10 +267,10 @@ set hlsearch
 nohls
 
 " hide search highlight
-nnoremap <silent> <leader>0 :nohls<CR>
+nnoremap <silent> <leader>0 :nohls<cr>
 
 " don't move on *
-nnoremap * *<C-o>
+nnoremap * *<c-o>
 
 " center search
 nmap n nzz
@@ -210,7 +327,7 @@ set shortmess=atI
 set visualbell
 
 " restore messed up vim and splits
-map <F5> :redraw!<CR><c-w>=
+map <F5> :redraw!<cr><c-w>=
 
 
 
@@ -223,7 +340,7 @@ set foldmethod=syntax
 set nofoldenable
 
 " toggle folds with space bar
-nnoremap <silent> <Space> za
+nnoremap <silent> <space> za
 
 " allow syntax foldmethod for javascript
 let javaScript_fold=1
@@ -234,18 +351,31 @@ let javaScript_fold=1
 " ==============================================
 
 " easy window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
 
 " easy tab navigation
-map <S-l> :tabnext<CR>
-map <S-h> :tabprevious<CR>
+map <s-l> :tabnext<cr>
+map <s-h> :tabprevious<cr>
+
+" move the cursor in insert mode
+imap <c-h> <c-o>h
+imap <c-j> <c-o>j
+imap <c-k> <c-o>k
+imap <c-l> <c-o>l
+
 
 
 " AUTOCOMMANDS
 " ==============================================
+
+" set this when coffeescript
+au! BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
+" let vim create a template file based on the file type
+au! BufNewFile * silent! 0r $HOME/.vim/templates/template.%:e
 
 " remove unwanted trailling spaces on save
 au! BufWritePre * :%s/\s\+$//e
@@ -254,5 +384,27 @@ au! BufWritePre * :%s/\s\+$//e
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
 
 " enter key goes to error in quickfix window (CoffeeLint fix)
-au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<CR>
+au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<cr>
 
+
+
+" EDIT/SOURCE VIMRC/PLUGINS
+" ==============================================
+
+" vimrc
+nmap <leader>ve :split $MYVIMRC<cr>
+nmap <leader>vs :so $MYVIMRC<cr>
+
+" plugins.vim
+nmap <leader>pe :exe 'split '.$MYPLUGINS<cr>
+
+
+
+" SPELLING
+" ==============================================
+
+" fix my common spelling mistakes
+iab slef self
+iab tihs this
+iab functino function
+iab getElementByID getElementById
