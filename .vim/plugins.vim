@@ -36,3 +36,6 @@ Bundle 'JavaScript-syntax'
 
 " less syntax
 Bundle 'groenewege/vim-less'
+
+" multiple cursors
+Bundle 'terryma/vim-multiple-cursors'
