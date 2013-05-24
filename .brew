@@ -45,6 +45,7 @@ brew install phantomjs
 brew install macvim
 brew install sqlite
 brew install lua
+brew install node
 
 # Remove outdated versions from the cellar
 brew cleanup
