@@ -1,0 +1,26 @@
+alias cl="clear"
+alias ex="exit"
+alias ls="ls -G"
+alias c="pygmentize -O style=monokai -f console256 -g"
+
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Quick cd home
+home() {
+  cd ~/$@
+}
+alias home=home
+alias reload=". ~/.bashrc"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
