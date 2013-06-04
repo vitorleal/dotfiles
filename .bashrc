@@ -35,3 +35,8 @@ function prompt() {
 PROMPT_COMMAND=prompt
 PS1="\n\n\[${DARKGREY}\]>\[${RESET}\] "
 PS2='+ '
+
+# auto completition from brew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
