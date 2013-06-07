@@ -47,6 +47,7 @@ brew install sqlite
 brew install lua
 brew install node
 brew install bash-completion
+brew install ffmpeg
 
 # Remove outdated versions from the cellar
 brew cleanup
