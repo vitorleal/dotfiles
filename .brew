@@ -27,6 +27,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 brew tap josegonzalez/homebrew-php
 brew install php54
+brew install python
 
 # Install everything else
 brew install ack
