@@ -281,14 +281,6 @@ nmap N Nzz
 " TERMINAL
 " ==============================================
 
-let s:txtwidth=120
-
-" limit textwidth
-exe 'set textwidth=' . s:txtwidth
-
-" highlight column limit
-exe 'set colorcolumn=' . s:txtwidth
-
 " wider number width
 set numberwidth=6
 
