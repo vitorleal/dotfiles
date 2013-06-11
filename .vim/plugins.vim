@@ -11,6 +11,8 @@ Bundle 'kchmck/vim-coffee-script'
 autocmd BufNewFile,BufReadPost *.coffee setlocal foldmethod=indent nofoldenable
 
 " SnipMate
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 
 " Jade
