@@ -205,24 +205,6 @@ endfunction
 "vnoremap <silent> Y :call YankInPlace()<cr>
 
 
-" SNIPPETS
-" ==============================================
-
-" edit desired snippet of snipMate
-function! EditSnippet()
-  call inputsave()
-  let type = input('Enter snippets lang ')
-  call inputrestore()
-  if type == 'js'
-    let snippetsFile = 'javascript'
-  endif
-  exe ':e ~/.vim/snippets/' . snippetsFile . '.snippets'
-endfunction
-
-" fast snippet edit
-map <silent> <leader>se :call EditSnippet()<cr>
-
-
 " SPLITS
 " ==============================================
 
@@ -337,6 +319,10 @@ nnoremap <silent> <space> za
 " allow syntax foldmethod for javascript
 let javaScript_fold=1
 
+
+" SIDEBAR
+" =============================================
+map <C-n> :NERDTreeToggle<CR>
 
 
 " NAVIGATION
