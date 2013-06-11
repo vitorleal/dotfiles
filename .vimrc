@@ -370,8 +370,8 @@ au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<cr>
 " ==============================================
 
 " vimrc
-nmap <leader>ve :split $MYVIMRC<cr>
-nmap <leader>vs :so $MYVIMRC<cr>
+nmap <leader>vs :vsplit $MYVIMRC<cr>
+nmap <leader>so :so $MYVIMRC<cr>
 
 " plugins.vim
 nmap <leader>pe :exe 'split '.$MYPLUGINS<cr>
