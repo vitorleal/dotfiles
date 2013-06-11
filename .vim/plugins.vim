@@ -41,3 +41,6 @@ Bundle 'groenewege/vim-less'
 
 " multiple cursors
 Bundle 'terryma/vim-multiple-cursors'
+
+" NERDtree
+Bundle 'scrooloose/nerdtree'
