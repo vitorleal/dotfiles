@@ -33,7 +33,7 @@ function prompt() {
 }
 
 PROMPT_COMMAND=prompt
-PS1="\n\n\[${DARKGREY}\]>\[${RESET}\] "
+PS1="\n${BLUE}----------------------------------------${RESET}\n\[${DARKGREY}\]>\[${RESET}\] "
 PS2='+ '
 
 # auto completition from brew
