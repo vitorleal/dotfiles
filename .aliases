@@ -19,9 +19,6 @@ alias reload=". ~/.bashrc"
 # List only directories
 alias lsd='ls -l | grep "^d"'
 
-# open MacVim App
-alias macvim="open ~/Applications/MacVim.app"
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
