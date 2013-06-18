@@ -17,6 +17,8 @@ home() {
 }
 alias home=home
 alias reload=". ~/.bashrc"
+alias site="cd ~/Sites"
+alias sites="cd ~/Sites"
 
 # List only directories
 alias lsd='ls -l | grep "^d"'
