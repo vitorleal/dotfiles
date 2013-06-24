@@ -44,3 +44,6 @@ Bundle 'terryma/vim-multiple-cursors'
 
 " NERDtree
 Bundle 'scrooloose/nerdtree'
+
+" Cntr P
+Bundle 'kien/ctrlp.vim'
