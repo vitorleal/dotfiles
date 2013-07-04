@@ -49,6 +49,7 @@ brew install lua
 brew install node
 brew install bash-completion
 brew install ffmpeg
+brew install w3m
 
 # Remove outdated versions from the cellar
 brew cleanup
