@@ -47,3 +47,6 @@ Bundle 'scrooloose/nerdtree'
 
 " Cntr P
 Bundle 'kien/ctrlp.vim'
+
+" Puppet syntax
+Bundle 'puppetlabs/puppet-syntax-vim'
