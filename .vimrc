@@ -4,7 +4,6 @@ set nocp
 
 " PLUGINS
 " ==============================================
-
 " my plugins config file path
 let $MYPLUGINS = '~/.vim/plugins.vim'
 
@@ -15,7 +14,6 @@ exe 'so '.$MYPLUGINS
 
 " GVIMRC
 " ==============================================
-
 " define gvimrc here
 if has('gui_running')
   if has('mac')
@@ -29,8 +27,14 @@ endif
 
 " EDITION
 " ==============================================
+syntax enable
+set background=dark
 
-colorscheme BusyBee
+" solarized options
+let g:solarized_termtrans = 1
+let g:solarized_visibility="high"
+let g:solarized_contrast="high"
+colorscheme solarized
 
 " basic edition stuff on
 syntax on
@@ -73,11 +77,6 @@ set autoread
 " allow hidden buffers
 set hidden
 
-" highlight trailing whitespace (and tabs)
-" http://nvie.com/posts/how-i-boosted-my-vim/
-set list
-set listchars=tab:▸\ ,trail:·
-
 " color trailing whitespace
 hi TrailWhitespace ctermbg=198 guibg=#f62c73
 match TrailWhitespace /\s\+$\| \+\ze\t/
@@ -102,7 +101,6 @@ set mouse=a
 
 " SCROLLING
 " ==============================================
-
 " show more lines around cursor when at the edge of file
 set scrolloff=3
 set sidescrolloff=5
@@ -119,7 +117,6 @@ set nostartofline
 
 " MAPPINGS
 " ==============================================
-
 " change the mapleader from \ to ,
 let mapleader=","
 
@@ -201,13 +198,8 @@ function! YankInPlace()
   call setpos('.', p)
 endfunction
 
-" mapping to YankInPlace
-"vnoremap <silent> Y :call YankInPlace()<cr>
-
-
 " SPLITS
 " ==============================================
-
 " always do vertical splits at right side
 " and horizontal splits below
 set splitright splitbelow
@@ -232,7 +224,6 @@ map <silent> <leader>vb :vertical :ball<cr>
 
 " SEARCH
 " ==============================================
-
 " ignore case when searching
 set ignorecase
 
@@ -262,7 +253,6 @@ nmap N Nzz
 
 " TERMINAL
 " ==============================================
-
 " wider number width
 set numberwidth=6
 
@@ -307,7 +297,6 @@ map <F5> :redraw!<cr><c-w>=
 
 " FOLDS
 " ==============================================
-
 set foldmethod=syntax
 
 " do not fold automatically
@@ -322,12 +311,11 @@ let javaScript_fold=1
 
 " SIDEBAR
 " =============================================
-map <C-n> :NERDTreeToggle<CR>
+map <Leader>s :NERDTreeToggle<CR>
 
 
 " NAVIGATION
 " ==============================================
-
 " easy window navigation
 map <c-h> <c-w>h
 map <c-j> <c-w>j
@@ -348,7 +336,6 @@ imap <c-l> <c-o>l
 
 " AUTOCOMMANDS
 " ==============================================
-
 " set this when coffeescript
 au! BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
@@ -368,7 +355,6 @@ au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<cr>
 
 " EDIT/SOURCE VIMRC/PLUGINS
 " ==============================================
-
 " vimrc
 nmap <leader>vs :vsplit $MYVIMRC<cr>
 nmap <leader>so :so $MYVIMRC<cr>
@@ -380,7 +366,6 @@ nmap <leader>pe :exe 'split '.$MYPLUGINS<cr>
 
 " SPELLING
 " ==============================================
-
 " fix my common spelling mistakes
 iab slef self
 iab tihs this

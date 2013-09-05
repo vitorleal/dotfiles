@@ -50,3 +50,6 @@ Bundle 'kien/ctrlp.vim'
 
 " Puppet syntax
 Bundle 'puppetlabs/puppet-syntax-vim'
+
+" AirLine
+Bundle 'bling/vim-airline'
