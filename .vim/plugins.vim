@@ -53,3 +53,7 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 
 " AirLine
 Bundle 'bling/vim-airline'
+
+" GuitGutter
+Bundle 'airblade/vim-gitgutter'
+
