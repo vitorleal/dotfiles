@@ -57,3 +57,8 @@ Bundle 'bling/vim-airline'
 " GuitGutter
 Bundle 'airblade/vim-gitgutter'
 
+" Surround
+Bundle 'tpope/vim-surround'
+
+
+
