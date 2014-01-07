@@ -60,5 +60,6 @@ Bundle 'airblade/vim-gitgutter'
 " Surround
 Bundle 'tpope/vim-surround'
 
-
+" Arduino
+Bundle "sudar/vim-arduino-syntax"
 
