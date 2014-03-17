@@ -1,0 +1,18 @@
+# Install native apps
+function installcask() {
+	brew cask install "${@}" 2> /installdev/null
+}
+
+installcask dropbox
+installcask google-chrome
+installcask google-chrome-canary
+installcask firefox
+installcask imageoptim
+installcask iterm2
+installcask macvim
+installcask the-unarchiver
+installcask transmission
+installcask virtualbox
+installcask vlc
+installcask skype
+installcask kaleidoscope
