@@ -32,3 +32,6 @@ installcask transmit
 installcask charles
 installcask vagrant
 installcask processing
+installcask licecap
+installcask android-studio
+installcask android-file-transfer
