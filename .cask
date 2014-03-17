@@ -6,7 +6,9 @@ function installcask() {
 installcask dropbox
 installcask google-chrome
 installcask google-chrome-canary
+installcask google-drive
 installcask firefox
+installcask firefox-nightly
 installcask imageoptim
 installcask iterm2
 installcask macvim
@@ -16,3 +18,17 @@ installcask virtualbox
 installcask vlc
 installcask skype
 installcask kaleidoscope
+installcask alfred
+installcask arduino
+installcask arduino-galileo
+installcask cleanmymac
+installcask dash
+installcask evernote
+installcask fritzing
+installcask mou
+installcask mongohub
+installcask sequel-pro
+installcask transmit
+installcask charles
+installcask vagrant
+installcask processing
