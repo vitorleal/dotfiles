@@ -63,3 +63,9 @@ Bundle 'tpope/vim-surround'
 " Arduino
 Bundle "sudar/vim-arduino-syntax"
 
+" Dash
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
+
+" Vim Colors
+Bundle 'ap/vim-css-color'

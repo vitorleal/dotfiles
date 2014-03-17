@@ -31,7 +31,6 @@ brew install python
 
 # Install everything else
 brew install ack
-#brew install exiv2
 brew install git
 brew install imagemagick
 brew install lynx
@@ -45,11 +44,17 @@ brew install mercurial
 brew install phantomjs
 brew install macvim
 brew install sqlite
+brew install mysql
 brew install lua
 brew install node
 brew install bash-completion
 brew install ffmpeg
 brew install w3m
+brew install mosquitto
+
+#Brew cask - install native apps
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
 
 # Remove outdated versions from the cellar
 brew cleanup
