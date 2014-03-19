@@ -36,3 +36,4 @@ installcask licecap
 installcask android-studio
 installcask android-file-transfer
 installcask vagrant
+installcask the-unarchiver
