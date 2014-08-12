@@ -7,8 +7,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'Raimondi/delimitMate'
 Bundle 'HTML-AutoCloseTag'
@@ -23,12 +21,9 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
-Bundle "sudar/vim-arduino-syntax"
-" Dash
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+Bundle 'sudar/vim-arduino-syntax'
 Bundle 'scrooloose/syntastic'
-Bundle 'kchmck/vim-coffee-script'
+Bundle 'heavenshell/vim-jsdoc'
 
 syntax enable
 filetype plugin indent on
