@@ -24,6 +24,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'sudar/vim-arduino-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'heavenshell/vim-jsdoc'
+Bundle 'editorconfig/editorconfig-vim'
 
 syntax enable
 filetype plugin indent on
