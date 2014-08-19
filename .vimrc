@@ -30,7 +30,7 @@ endif
 syntax enable
 set background=dark
 
-" solarized options
+"solarized options
 let g:solarized_termtrans = 1
 let g:solarized_visibility="high"
 let g:solarized_contrast="high"
@@ -95,7 +95,7 @@ vnoremap > >gv
 nnoremap J mzJ`z
 
 " set mouse
-set mouse=a
+"set mouse=a
 
 
 
@@ -312,7 +312,7 @@ let javaScript_fold=1
 " SIDEBAR
 " =============================================
 map <Leader>s :NERDTreeToggle<CR>
-
+let NERDTreeIgnore = ['\.pyc$']
 
 " NAVIGATION
 " ==============================================
@@ -333,19 +333,31 @@ imap <c-k> <c-o>k
 imap <c-l> <c-o>l
 
 
+
 " AUTOCOMMANDS
 " ==============================================
+" set this when coffeescript
+au! BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+
+" let vim create a template file based on the file type
+au! BufNewFile * silent! 0r $HOME/.vim/templates/template.%:e
+
 " remove unwanted trailling spaces on save
 au! BufWritePre * :%s/\s\+$//e
 
 " set current path to current file parent directory for better use of :find
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
 
+" enter key goes to error in quickfix window (CoffeeLint fix)
+au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<cr>
+
+
 
 " EDIT/SOURCE VIMRC/PLUGINS
 " ==============================================
 " vimrc
 nmap <leader>vs :vsplit $MYVIMRC<cr>
+nmap <leader>so :so $MYVIMRC<cr>
 
 " plugins.vim
 nmap <leader>pe :exe 'split '.$MYPLUGINS<cr>
@@ -359,3 +371,7 @@ iab slef self
 iab tihs this
 iab functino function
 iab getElementByID getElementById
+
+" CONTROL P
+" ==============================================
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
