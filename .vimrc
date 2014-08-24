@@ -28,7 +28,7 @@ endif
 " EDITION
 " ==============================================
 syntax enable
-set background=dark
+"set background=dark
 
 "solarized options
 colorscheme lucario
@@ -330,24 +330,13 @@ imap <c-k> <c-o>k
 imap <c-l> <c-o>l
 
 
-
 " AUTOCOMMANDS
 " ==============================================
-" set this when coffeescript
-au! BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
-
-" let vim create a template file based on the file type
-au! BufNewFile * silent! 0r $HOME/.vim/templates/template.%:e
-
 " remove unwanted trailling spaces on save
 au! BufWritePre * :%s/\s\+$//e
 
 " set current path to current file parent directory for better use of :find
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
-
-" enter key goes to error in quickfix window (CoffeeLint fix)
-au! BufWinEnter quickfix nmap <buffer> <Enter> :.cc<cr>
-
 
 
 " EDIT/SOURCE VIMRC/PLUGINS
