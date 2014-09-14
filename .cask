@@ -12,7 +12,6 @@ installcask firefox-nightly
 installcask imageoptim
 installcask iterm2
 installcask macvim
-installcask the-unarchiver
 installcask transmission
 installcask virtualbox
 installcask vlc
