@@ -61,6 +61,7 @@ brew install lsusb
 brew install mariadb
 brew install postgresql
 brew install postgis
+brew install tesseract
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
