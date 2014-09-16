@@ -53,6 +53,7 @@ brew install w3m
 brew install mosquitto
 brew install rabbitmq
 brew install android-sdk
+brew install ab
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
