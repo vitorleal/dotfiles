@@ -55,6 +55,8 @@ brew install rabbitmq
 brew install android-sdk
 brew install ab
 brew install jenkins
+brew install jpeg
+brew install x264
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
