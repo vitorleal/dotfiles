@@ -57,6 +57,7 @@ brew install ab
 brew install jenkins
 brew install jpeg
 brew install x264
+brew install lsusb
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
