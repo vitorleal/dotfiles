@@ -59,6 +59,7 @@ brew install jpeg
 brew install x264
 brew install lsusb
 brew install mariadb
+brew install postgresql
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
