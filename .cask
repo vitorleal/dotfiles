@@ -10,6 +10,7 @@ installcask google-drive
 installcask firefox
 installcask firefox-nightly
 installcask imageoptim
+installcask imagealpha
 installcask iterm2
 installcask macvim
 installcask transmission
