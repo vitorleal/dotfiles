@@ -11,7 +11,6 @@ let $MYPLUGINS = '~/.vim/plugins.vim'
 exe 'so '.$MYPLUGINS
 
 
-
 " GVIMRC
 " ==============================================
 " define gvimrc here
@@ -24,20 +23,19 @@ if has('gui_running')
 endif
 
 
-
 " EDITION
 " ==============================================
 syntax enable
-"set background=dark
-
-"solarized options
-colorscheme lucario
+set background=light
 
 " basic edition stuff on
 syntax on
 filetype on
 filetype plugin on
 filetype indent on
+
+"solarized options
+colorscheme lucario
 
 " use unix as standard file type
 set fileformats=unix,dos,mac
@@ -93,7 +91,6 @@ nnoremap J mzJ`z
 
 " set mouse
 "set mouse=a
-
 
 
 " SCROLLING
