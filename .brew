@@ -62,5 +62,10 @@ brew install docker
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
+#Install R
+brew tap homebrew/science
+brew install gcc
+brew install r
+
 # Remove outdated versions from the cellar
 brew cleanup
