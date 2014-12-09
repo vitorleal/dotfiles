@@ -25,6 +25,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'heavenshell/vim-jsdoc'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'elzr/vim-json'
+Plugin 'fatih/vim-go'
 
 syntax enable
 filetype plugin indent on
