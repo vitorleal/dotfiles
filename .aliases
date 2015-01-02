@@ -1,7 +1,6 @@
 alias cl="clear"
 alias ex="exit"
 alias ls="ls -G"
-alias c="pygmentize -O style=monokai -f console256 -g"
 
 # Easier navigation
 alias ..="cd .."
