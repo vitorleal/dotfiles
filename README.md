@@ -1,7 +1,7 @@
 My Dotfiles
 ===========
 
-Config files for:
+My config files for:
 
 - OSX - Mac default configs
 - [Homebrew](http://brew.sh/) - Mac package manager
