@@ -23,7 +23,8 @@ Bundle 'sudar/vim-arduino-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'elzr/vim-json'
-Plugin 'fatih/vim-go'
+Bundle 'fatih/vim-go'
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 syntax enable
 filetype plugin indent on

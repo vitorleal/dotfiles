@@ -35,7 +35,7 @@ filetype plugin on
 filetype indent on
 
 "solarized options
-colorscheme lucario
+colorscheme Dracula
 
 " use unix as standard file type
 set fileformats=unix,dos,mac
