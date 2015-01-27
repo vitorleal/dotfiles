@@ -334,7 +334,7 @@ au! BufWritePre * :%s/\s\+$//e
 
 " set current path to current file parent directory for better use of :find
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
-
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " EDIT/SOURCE VIMRC/PLUGINS
 " ==============================================
