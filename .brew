@@ -57,6 +57,7 @@ brew install postgresql
 brew install postgis
 brew install tesseract
 brew install docker
+brew install wireshark --with-qt
 
 #Brew cask - install native apps
 brew install phinze/cask/brew-cask
