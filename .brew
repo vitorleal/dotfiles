@@ -55,7 +55,6 @@ brew install lsusb
 brew install postgresql
 brew install postgis
 brew install tesseract
-brew install docker
 brew install boot2docker
 brew install cloc
 
