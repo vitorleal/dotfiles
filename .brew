@@ -9,8 +9,10 @@ brew upgrade
 # Install GNU core utilities (those that come with OS X are outdated)
 brew install coreutils
 echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH."
+
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
+
 # Install Bash 4
 brew install bash
 
@@ -20,8 +22,6 @@ brew install wget --enable-iri
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-brew tap josegonzalez/homebrew-php
-brew install php54
 brew install python
 
 # Install everything else
@@ -35,7 +35,6 @@ brew install rhino
 brew install tree
 brew install webkit2png
 brew install mongodb
-brew install mercurial
 brew install phantomjs
 brew install sqlite
 brew install mysql
@@ -52,18 +51,22 @@ brew install jenkins
 brew install jpeg
 brew install x264
 brew install lsusb
-brew install postgresql
-brew install postgis
 brew install tesseract
-brew install boot2docker
-brew install docker-compose
 brew install cloc
 
-#Brew cask - install native apps
+# Postgres
+brew install postgresql
+brew install postgis
+
+# Docker
+brew install boot2docker
+brew install docker-compose
+
+# Brew cask - install native apps
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
-#Install R
+# Install R
 brew tap homebrew/science
 brew install gcc
 brew install r
