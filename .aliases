@@ -1,6 +1,7 @@
 alias cl="clear"
 alias ex="exit"
 alias ls="ls -G"
+alias dcompose="docker-compose"
 
 # Easier navigation
 alias ..="cd .."
