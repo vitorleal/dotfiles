@@ -26,7 +26,6 @@ endif
 " EDITION
 " ==============================================
 syntax enable
-set background=light
 
 " basic edition stuff on
 syntax on
