@@ -53,6 +53,7 @@ brew install x264
 brew install lsusb
 brew install tesseract
 brew install cloc
+brew install ngrep
 
 # Postgres
 brew install postgresql
