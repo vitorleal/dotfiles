@@ -1,40 +1,49 @@
-# Install native apps
+# Install cask apps
 function installcask() {
-	brew cask install "${@}" 2> /installdev/null
+	brew cask install "${@}" 2> /dev/null
 }
 
-installcask dropbox
+# Browsers
 installcask google-chrome
 installcask google-chrome-canary
 installcask google-drive
 installcask firefox
 installcask firefox-nightly
+iinstalcask tor
+
+# Images
 installcask imageoptim
 installcask imagealpha
-installcask iterm2
-installcask macvim
+
+# Others
 installcask transmission
-installcask virtualbox
 installcask vlc
 installcask skype
-installcask kaleidoscope
 installcask alfred
+installcask cleanmymac
+installcask evernote
+installcask transmit
+installcask licecap
+installcask android-file-transfer
+installcask the-unarchiver
+
+# Arduino
 installcask arduino
 installcask arduino-galileo
-installcask cleanmymac
-installcask dash
-installcask evernote
 installcask fritzing
-installcask mou
+
+# Database
 installcask mongohub
 installcask sequel-pro
-installcask transmit
-installcask charles
+installcask rdm
+
+# Code
 installcask vagrant
+installcask virtualbox
+installcask kaleidoscope
+installcask dash
 installcask processing
-installcask licecap
 installcask android-studio
-installcask android-file-transfer
 installcask vagrant
-installcask the-unarchiver
 installcask wireshark
+
