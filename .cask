@@ -46,4 +46,4 @@ installcask processing
 installcask android-studio
 installcask vagrant
 installcask wireshark
-
+installcask zoc6
