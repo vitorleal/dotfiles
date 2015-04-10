@@ -11,18 +11,6 @@ let $MYPLUGINS = '~/.vim/plugins.vim'
 exe 'so '.$MYPLUGINS
 
 
-" GVIMRC
-" ==============================================
-" define gvimrc here
-if has('gui_running')
-  if has('mac')
-    set guifont=Monaco:h12
-  else
-    set guifont=Courier_New:h10:cANSI
-  endif
-endif
-
-
 " EDITION
 " ==============================================
 syntax enable
@@ -88,9 +76,6 @@ vnoremap > >gv
 " join lines with cursor staying in place
 nnoremap J mzJ`z
 
-" set mouse
-"set mouse=a
-
 
 " SCROLLING
 " ==============================================
@@ -113,53 +98,17 @@ set nostartofline
 " change the mapleader from \ to ,
 let mapleader=","
 
-" - is the new : (i.e. -w to save) faster instead of shift+:
-nnoremap - :
-
 " easy :bd
 map <silent> <leader>bd :bd<cr>
 
 " delete all buffers
 map <silent> <leader>wp :1,9999bwipeout<cr>
 
-" quick save
-map <leader>w :w<cr>
-
 " select all
 nmap <leader>a ggVG
 
-" force save of files with root permission
-com! W :w !sudo tee %
-map <leader>W :W<cr>
-
 " maximize vim window
 map <leader>m :let &lines=500<bar>let &columns=500<cr>
-
-" minimize vim window
-map <leader>n :let &lines=35<bar>let &columns=140<bar>winpos 150 110<cr>
-
-" make j/k move to next visual line instead of pysical line
-" http://yubinkim.com/?p=6
-nnoremap k gk
-nnoremap j gj
-nnoremap gk k
-nnoremap gj j
-
-" easy move lines in all modes
-imap <a-j> <esc>mz:m+<cr>`zi
-imap <a-k> <esc>mz:m-2<cr>`zi
-nmap <a-j> mz:m+<cr>`z
-nmap <a-k> mz:m-2<cr>`z
-vmap <a-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <a-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-" easy add new line in normal mode
-" without moving the cursor
-nnoremap <cr> mzo<esc>`z
-
-" easy remove line in normal mode
-" (copy to _ for not losing the last register)
-nnoremap <BS> "_dd
 
 " easy copy/paste from/to system clipboard
 map <leader>yy "*y
@@ -167,29 +116,6 @@ map <leader>pp "*p
 map <leader>YY "*Y
 map <leader>PP "*P
 
-" list current dir files and folders
-nmap <c-p> :e <c-d>
-
-" quick install new bundles
-map <leader>bi :BundleInstall<cr>
-
-" easy open buffer in new tab
-map <leader>te :ls<cr>:tabedit #
-
-" guizoom.vim mappings
-map <leader>+ :ZoomIn<cr>
-map <leader>- :ZoomOut<cr>
-map <leader>= :ZoomReset<cr>
-
-" function to yank lines and keep cursor in position
-function! YankInPlace()
-  " save last cursor position
-  let p=getpos('.')
-  " yank current visual selection to reg x
-  normal gv"xy
-  " set last cursor position
-  call setpos('.', p)
-endfunction
 
 " SPLITS
 " ==============================================
@@ -214,7 +140,6 @@ nnoremap <leader>sb <c-w><s-j>
 map <silent> <leader>vb :vertical :ball<cr>
 
 
-
 " SEARCH
 " ==============================================
 " ignore case when searching
@@ -235,13 +160,9 @@ nohls
 " hide search highlight
 nnoremap <silent> <leader>0 :nohls<cr>
 
-" don't move on *
-nnoremap * *<c-o>
-
 " center search
 nmap n nzz
 nmap N Nzz
-
 
 
 " TERMINAL
@@ -287,7 +208,6 @@ set visualbell
 map <F5> :redraw!<cr><c-w>=
 
 
-
 " FOLDS
 " ==============================================
 set foldmethod=syntax
@@ -295,17 +215,12 @@ set foldmethod=syntax
 " do not fold automatically
 set nofoldenable
 
-" toggle folds with space bar
-nnoremap <silent> <space> za
-
-" allow syntax foldmethod for javascript
-let javaScript_fold=1
-
 
 " SIDEBAR
 " =============================================
 map <Leader>s :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
+
 
 " NAVIGATION
 " ==============================================
@@ -335,16 +250,6 @@ au! BufWritePre * :%s/\s\+$//e
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
 au BufNewFile,BufRead *.ejs set filetype=html
 
-" EDIT/SOURCE VIMRC/PLUGINS
-" ==============================================
-" vimrc
-nmap <leader>vs :vsplit $MYVIMRC<cr>
-nmap <leader>so :so $MYVIMRC<cr>
-
-" plugins.vim
-nmap <leader>pe :exe 'split '.$MYPLUGINS<cr>
-
-
 
 " SPELLING
 " ==============================================
@@ -353,6 +258,7 @@ iab slef self
 iab tihs this
 iab functino function
 iab getElementByID getElementById
+
 
 " CONTROL P
 " ==============================================
