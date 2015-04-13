@@ -18,7 +18,6 @@ brew install ack
 brew install git
 brew install imagemagick
 brew install lynx
-brew install node
 brew install rename
 brew install rhino
 brew install tree
@@ -28,7 +27,7 @@ brew install phantomjs
 brew install sqlite
 brew install mysql
 brew install lua
-brew install node
+brew install nvm
 brew install bash-completion
 brew install ffmpeg
 brew install w3m
