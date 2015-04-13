@@ -7,24 +7,21 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'digitaltoad/vim-jade'
 Bundle 'Raimondi/delimitMate'
 Bundle 'matchit.zip'
 Bundle 'ervandew/supertab'
-Bundle 'groenewege/vim-less'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
-Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'bling/vim-airline'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
-Bundle 'sudar/vim-arduino-syntax'
 Bundle 'scrooloose/syntastic'
 Bundle 'editorconfig/editorconfig-vim'
-Bundle 'elzr/vim-json'
-Bundle 'fatih/vim-go'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Bundle 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Bundle 'sheerun/vim-polyglot'
+Bundle 'gorodinskiy/vim-coloresque'
+Bundle 'scrooloose/nerdcommenter'
 
 syntax enable
 filetype plugin indent on
