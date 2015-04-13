@@ -19,3 +19,6 @@ export LANG=en_US.UTF-8
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
