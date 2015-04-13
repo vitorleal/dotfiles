@@ -54,6 +54,7 @@ brew install lsusb
 brew install tesseract
 brew install cloc
 brew install ngrep
+brew install vim
 
 # Postgres
 brew install postgresql
