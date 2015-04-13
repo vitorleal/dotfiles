@@ -8,3 +8,4 @@ installglobal express
 installglobal request
 installglobal bleno
 installglobal noble
+installglobal phantomjs
