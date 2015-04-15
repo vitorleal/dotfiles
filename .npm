@@ -9,3 +9,4 @@ installglobal request
 installglobal bleno
 installglobal noble
 installglobal phantomjs
+installglobal mocha
