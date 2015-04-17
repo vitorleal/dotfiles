@@ -30,6 +30,9 @@ set fileformats=unix,dos,mac
 " always set autoindenting on
 set autoindent
 
+" delete
+set backspace=2
+
 " good when starting a new line
 set smartindent
 
