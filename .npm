@@ -10,3 +10,4 @@ installglobal bleno
 installglobal noble
 installglobal phantomjs
 installglobal mocha
+installglobal harp
