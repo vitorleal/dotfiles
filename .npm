@@ -11,3 +11,5 @@ installglobal noble
 installglobal phantomjs
 installglobal mocha
 installglobal harp
+installglobal grunt-cli
+installglobal gulp
