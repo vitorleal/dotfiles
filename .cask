@@ -47,3 +47,4 @@ installcask android-studio
 installcask vagrant
 installcask wireshark
 installcask zoc6
+installcask anybar
