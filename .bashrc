@@ -22,3 +22,4 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export GOPATH="$HOME/go"
