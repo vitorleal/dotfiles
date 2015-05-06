@@ -3,12 +3,12 @@ hardstatus on
 hardstatus alwayslastline
 hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
 
-# # Autodetach session on hangup instead of
-# # terminating screen completely
+# Autodetach session on hangup instead of
+# terminating screen completely
 autodetach on
 
-# # Turn off the splash screen
+# Turn off the splash screen
 startup_message off
 
-# # set log on all windows
+# set log on all windows
 deflog on
