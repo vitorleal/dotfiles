@@ -12,7 +12,7 @@ $ source osx.sh
 ```
 
 
-## Vim, Bash settings
+## Vim, Bash
 
 To config my [Vim](http://www.vim.org/) settings and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) configs, alias, exportsrun the ```install.sh```
 It will copy all the **.** files for you
