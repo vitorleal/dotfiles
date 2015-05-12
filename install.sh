@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Dotfiles
+echo "• Putting dotfiles in your home path: $HOME"
+
 files=(
   "./.aliases"
   "./.bash_profile"
@@ -13,14 +16,26 @@ files=(
   "./.vimrc"
 )
 
-echo "Puting dotfiles in your home path ~/"
 for file in ${files[@]}; do
     if [[ $(file $file | awk '{print $2}') == "directory" ]]; then
-      [ -r "$file" ] && cp -r "$file" ~/ && echo "copied folder $file"
+      [ -r "$file" ] && cp -r "$file" $HOME && echo "  - Copied folder $file"
 
     else
-      [ -r "$file" ] && cp "$file" ~/ && echo "copied file $file"
+      [ -r "$file" ] && cp "$file" $HOME && echo "  - Copied file $file"
     fi;
-done
-unset file
+done;
+
+unset file files;
+
+
+# HomeBrew
+echo "• Check if Homebrew is installed"
+
+if [[ $(which brew) != "" ]]; then
+  echo "  - Homebrew already installed"
+
+else
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo "  - Done installing Homebrew"
+fi;
 
