@@ -24,16 +24,8 @@ $ source install.sh
 
 After that install the **Vim** plugins using [Vundle](https://github.com/gmarik/Vundle.vim)
 
-First enter vim:
-
 ```
-$ vim
-```
-
-Then run the ```BundleInstall``` command
-
-```
-:BundleInstall
+$ vim +PluginInstall +qall
 ```
 
 
