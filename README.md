@@ -30,7 +30,7 @@ First enter vim:
 $ vim
 ```
 
-Then run the ```BundleInstall`` command
+Then run the ```BundleInstall``` command
 
 ```
 :BundleInstall
