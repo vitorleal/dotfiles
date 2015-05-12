@@ -1,25 +1,17 @@
-export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-export PATH="/usr/local/share/npm/bin:$PATH"
+# ┌─────────────────────────────────────────────────────────────┐
+# │                                                             │
+# │                                                             │
+# │  _  _  ____  ____  _____  ____    __    ____    __    __    │
+# │ ( \/ )(_  _)(_  _)(  _  )(  _ \  (  )  ( ___)  /__\  (  )   │
+# │  \  /  _)(_   )(   )(_)(  )   /   )(__  )__)  /(__)\  )(__  │
+# │   \/  (____) (__) (_____)(_)\_)  (____)(____)(__)(__)(____) │
+# │    ____  _____  ____  ____  ____  __    ____  ___           │
+# │   (  _ \(  _  )(_  _)( ___)(_  _)(  )  ( ___)/ __)          │
+# │    )(_) ))(_)(   )(   )__)  _)(_  )(__  )__) \__ \          │
+# │   (____/(_____) (__) (__)  (____)(____)(____)(___/  ()()()  │
+# │                                                             │
+# │                                                             │
+# └─────────────────────────────────────────────────────────────┘
 
-for file in ~/.{bash_prompt,aliases}; do
-  [ -r "$file" ] && source "$file"
-done
-unset file
+[ -n "$PS1" ] && source "$HOME/.bash_profile";
 
-
-# auto completition from brew
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-export GOPATH="$HOME/go"
