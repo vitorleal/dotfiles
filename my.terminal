@@ -148,7 +148,7 @@
 	<key>UseBrightBold</key>
 	<false/>
 	<key>name</key>
-	<string>MyTerminal</string>
+	<string>my</string>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
