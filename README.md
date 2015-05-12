@@ -1,20 +1,71 @@
-# My Dotfiles
+# My .dotfiles colection
 
-#### My config files for:
+![My Terminal Colors](http://i.imgur.com/YcLgdoG.png)
 
-- OSX - Mac default configs
 
-- [Homebrew](http://brew.sh/) - Mac package manager
+## OSX defaults
 
-- [Homebrew Cask](http://caskroom.io/) - Easily install app's in Mac
+To config a new mac with my default settings
 
-- [VIM](http://www.vim.org/) - Vim text editor config files
-  - Plugins manage by [Vundle](https://github.com/gmarik/Vundle.vim)
+```
+$ source osx.sh
+```
 
-- [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) - Unix shell config
 
-- [NPM](http://npmjs.com) - Node Packages Manager
+## Vim, Bash settings
 
-- Terminal Colors
-  ![My Terminal Colors](http://i.imgur.com/YcLgdoG.png)
+To config my [Vim](http://www.vim.org/) settings and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) configs, alias, exportsrun the ```install.sh```
+It will copy all the **.** files for you
+
+```
+$ source install.sh
+```
+
+After that install the **Vim** plugins using [Vundle](https://github.com/gmarik/Vundle.vim)
+
+First enter vim:
+
+```
+$ vim
+```
+
+Then run the ```BundleInstall`` command
+
+```
+:BundleInstall
+```
+
+
+## Homebrew
+
+To install all my comandline apps using [homebrew](http://brew.sh/)
+
+```
+$ source brew.sh
+```
+
+
+## Homebrew Cask
+
+To install all my apps using [Homebrew Cask](http://caskroom.io/)
+
+```
+$ source cask.sh
+```
+
+
+## NPM
+
+To install the [NPM](http://npmjs.com) modules
+
+```
+$ source npm.sh
+```
+
+
+## Terminal Colors
+
+The file ```my.terminal``` has the color settigns to use in the Mac's **Terminal** app
+
+In terminal app go to **Preferences** > **Import** and choose the file to import. After that set it as **default**
 
