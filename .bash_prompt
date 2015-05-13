@@ -1,5 +1,3 @@
-# @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
-
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM='gnome-256color';
 elif infocmp xterm-256color >/dev/null 2>&1; then
@@ -50,9 +48,11 @@ function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/{\1}/"
 }
 
+
+PS2="\[$YELLOW\]🚀  → \[$RESET\]";
+
 PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]";
 PS1+="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$WHITE\]in ";
 PS1+="\[$YELLOW\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")";
-PS1+="\[$PURPLE\]\$(parse_git_branch)\[$RESET\] \[$GREEN\]\$(parse_git_dirty)\[$RESET\]\n";
-PS1+="\[$YELLOW\]🚀  → \[$RESET\]";
+PS1+="\[$PURPLE\]\$(parse_git_branch)\[$RESET\] \[$GREEN\]\$(parse_git_dirty)\[$RESET\]\n$PS2";
 
