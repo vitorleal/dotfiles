@@ -1,9 +1,7 @@
 alias cl="clear"
 alias ex="exit"
-alias ls="ls -G"
-alias c="pygmentize -O style=monokai -f console256 -g"
-alias dcompose="docker-compose"
 
+# MySQL
 alias mysql=/usr/local/mysql/bin/mysql
 alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 alias mysql_config=/usr/local/mysql/bin/mysql_config
@@ -13,8 +11,26 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# List alias
 alias l="ls -l"
 alias la="ls -la"
+alias lsd='ls -l | grep "^d"'
+
+# Merge PDF files
+# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# Set ls color for MacOS
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+  alias ls="command ls -G"
+fi
+
+# Shortcuts
+alias v="vim +NERDTreeToggle"
+
+# Docker compose
+alias dcompose="docker-compose"
 
 # Quick home
 home() {
@@ -27,10 +43,6 @@ alias reload=". ~/.bashrc"
 alias site="cd ~/Sites"
 alias sites="cd ~/Sites"
 
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
 # Apps
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
@@ -38,16 +50,13 @@ alias safari="open -a safari"
 alias firefox="open -a firefox"
 alias opera="open -a opera"
 alias chrome="open -a google\ chrome"
+alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # Github
-alias gh="open -a google\ chrome 'http://github.com/vitorleal'"
-
-# List only directories
-alias lsd='ls -l | grep "^d"'
+alias gh="open http://github.com/vitorleal"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
