@@ -13,5 +13,9 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-#nodeJS/NPM
+# node.js/NPM
 node_modules
+npm-debug.log
+
+# screen
+screenlog*

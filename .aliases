@@ -37,9 +37,25 @@ home() {
   cd ~/$@
 }
 
+# Random number
+# Usage: `rand` will produce a random number between 1 adn 6
+# Usage: `rand 100` will produce a random number between 1 and 100
+rand() {
+  if [[ -n "$@" ]]; then
+    echo $[RANDOM%$@+1];
+  else
+    echo $[RANDOM%6+1];
+  fi;
+}
+alias rand=rand
+
 # Quick move
 alias home=home
+
+# Reload bashrc
 alias reload=". ~/.bashrc"
+
+# Move to site folder
 alias site="cd ~/Sites"
 alias sites="cd ~/Sites"
 

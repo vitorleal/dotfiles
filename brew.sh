@@ -43,7 +43,7 @@ brew install w3m
 brew install mosquitto
 brew install rabbitmq
 brew install android-sdk
-brew install ab
+brew install homebrew/apache/ab
 brew install jenkins
 brew install jpeg
 brew install x264

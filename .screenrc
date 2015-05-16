@@ -10,5 +10,3 @@ autodetach on
 # Turn off the splash screen
 startup_message off
 
-# set log on all windows
-deflog on
