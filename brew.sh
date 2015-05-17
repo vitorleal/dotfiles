@@ -69,6 +69,6 @@ brew tap homebrew/science
 brew install gcc
 brew install r
 
-# Remove outdated versions from the cellar
+# Clean it up
 brew cleanup
 
