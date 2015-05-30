@@ -44,7 +44,6 @@ brew install mosquitto
 brew install rabbitmq
 brew install android-sdk
 brew install homebrew/apache/ab
-brew install jenkins
 brew install jpeg
 brew install x264
 brew install lsusb
