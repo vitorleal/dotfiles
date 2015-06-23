@@ -9,9 +9,7 @@ function installcask() {
 installcask google-chrome
 installcask google-chrome-canary
 installcask google-drive
-installcask firefox
-installcask firefox-nightly
-iinstalcask tor
+installcask firefoxdeveloperedition
 
 # Images
 installcask imageoptim
@@ -28,15 +26,19 @@ installcask transmit
 installcask licecap
 installcask android-file-transfer
 installcask the-unarchiver
+installcask chromecast
 
 # Arduino
 installcask arduino
-installcask arduino-galileo
 installcask fritzing
 
+# Raspberry Pi
+installcask applepi-baker
+
 # Database
-installcask mongohub
+installcask robomongo
 installcask sequel-pro
+installcask pgadmin3
 installcask rdm
 
 # Code
@@ -46,7 +48,7 @@ installcask kaleidoscope
 installcask dash
 installcask processing
 installcask android-studio
-installcask vagrant
 installcask wireshark
 installcask zoc6
 installcask anybar
+
