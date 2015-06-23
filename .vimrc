@@ -44,6 +44,10 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 
+" Indent character
+let g:indentLine_char = '┆'
+let g:indentLine_color_term = 237
+
 " copy the previous indentation on autoindenting
 set copyindent
 

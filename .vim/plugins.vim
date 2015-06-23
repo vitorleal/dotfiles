@@ -22,6 +22,7 @@ Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 Plugin 'sheerun/vim-polyglot'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'Yggdroot/indentLine'
 
 call vundle#end()
 filetype plugin indent on
