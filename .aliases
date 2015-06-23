@@ -63,14 +63,12 @@ alias sites="cd ~/Sites"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
-alias firefox="open -a firefox"
-alias opera="open -a opera"
-alias chrome="open -a google\ chrome"
+alias firefox="open -a firefoxdeveloperedition"
 alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # Github
-alias gh="open http://github.com/vitorleal"
+alias gh="open https://github.com/vitorleal"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
