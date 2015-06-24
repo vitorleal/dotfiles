@@ -18,8 +18,8 @@ alias la="ls -la"
 alias lsd='ls -l | grep "^d"'
 
 # Merge PDF files
-# Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
-alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+# Usage: `pdfmerge -o output.pdf input{1,2,3}.pdf`
+alias pdfmerge='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
 # Set ls color for MacOS
 if [[ "$OSTYPE" =~ ^darwin ]]; then
