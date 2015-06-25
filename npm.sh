@@ -6,9 +6,8 @@ function installglobal() {
 
 installglobal express
 installglobal request
-installglobal bleno
-installglobal noble
 installglobal mocha
 installglobal harp
 installglobal grunt-cli
 installglobal gulp
+
