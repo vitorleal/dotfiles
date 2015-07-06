@@ -64,3 +64,9 @@ The file ```my.terminal``` has the color settigns to use in the Mac's **Terminal
 
 In terminal app go to **Preferences** > **Import** and choose the file to import. After that set it as **default**
 
+
+## Author
+
+| [![twitter/vitorleal](http://gravatar.com/avatar/e133221d7fbc0dee159dca127d2f6f00?s=80)](http://twitter.com/vitorleal "Follow @vitorleal on Twitter") |
+|---|
+| [Vitor Leal](http://vitorleal.com) |
