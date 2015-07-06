@@ -1,6 +1,6 @@
 # My .dotfiles colection :gem:
 
-https://img.shields.io/badge/dot-files-green.svg
+[![Dotfiles](https://img.shields.io/badge/dot-files-green.svg)](https://dotfiles.github.io/)
 
 ![My Terminal Colors](http://i.imgur.com/oxyVDqE.png)
 
