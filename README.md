@@ -1,5 +1,7 @@
 # My .dotfiles colection :gem:
 
+https://img.shields.io/badge/dot-files-green.svg
+
 ![My Terminal Colors](http://i.imgur.com/oxyVDqE.png)
 
 
