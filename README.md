@@ -1,6 +1,6 @@
 # My .dotfiles colection :gem:
 
-![My Terminal Colors](http://i.imgur.com/YcLgdoG.png)
+![My Terminal Colors](http://i.imgur.com/oxyVDqE.png)
 
 
 ## OSX defaults
