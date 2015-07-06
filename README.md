@@ -1,11 +1,11 @@
-# My .dotfiles colection
+# My .dotfiles colection :gem:
 
 ![My Terminal Colors](http://i.imgur.com/YcLgdoG.png)
 
 
 ## OSX defaults
 
-To config a new mac with my default settings
+To configurate a new Mac with my default settings
 
 ```
 $ source osx.sh
