@@ -45,3 +45,6 @@ fi;
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
+# Z
+source $(brew --prefix)/etc/profile.d/z.sh
+
