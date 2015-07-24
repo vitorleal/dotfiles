@@ -33,14 +33,14 @@ alias v="vim +NERDTreeToggle"
 alias dcompose="docker-compose"
 
 # Quick home
-home() {
+function home() {
   cd ~/$@
 }
 
 # Random number
 # Usage: `rand` will produce a random number between 1 adn 6
 # Usage: `rand 100` will produce a random number between 1 and 100
-rand() {
+function rand() {
   if [[ -n "$@" ]]; then
     echo $[RANDOM%$@+1];
   else
@@ -63,12 +63,24 @@ alias sites="cd ~/Sites"
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
 alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
-alias firefox="open -a firefoxdeveloperedition"
+alias firefox="open -a firefox"
+alias opera="open -a opera"
+alias chrome="open -a google\ chrome"
 alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # Github
-alias gh="open https://github.com/vitorleal"
+alias gh="open http://github.com/vitorleal"
+
+function gh_repo() {
+  if [[ $(git remote -v 2> /dev/null) ]]; then
+    git remote -v | grep origin | awk '{ print $2 }' | head -1 | xargs open
+  else
+    echo "Can't find 'origin' repository in this path"
+  fi
+}
+
+alias ghrepo=gh_repo
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
