@@ -83,6 +83,8 @@ vnoremap > >gv
 " join lines with cursor staying in place
 nnoremap J mzJ`z
 
+" Fix MacOS problem when editing crontab file with the command 'crontab -e'
+set backupskip=/tmp/*,/private/tmp/*
 
 " SCROLLING
 " ==============================================
