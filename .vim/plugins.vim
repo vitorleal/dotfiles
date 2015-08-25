@@ -6,9 +6,7 @@ call vundle#begin()
 " Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'Raimondi/delimitMate'
-Plugin 'matchit.zip'
 Plugin 'ervandew/supertab'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
@@ -21,8 +19,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Yggdroot/indentLine'
-Plugin 'severin-lemaignan/vim-minimap'
 
 " Color
 Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
