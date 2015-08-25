@@ -21,17 +21,14 @@ filetype on
 filetype plugin on
 filetype indent on
 
-"solarized options
-colorscheme Dracula
+"color options
+color Dracula
 
 " use unix as standard file type
 set fileformats=unix,dos,mac
 
 " always set autoindenting on
 set autoindent
-
-" delete
-set backspace=2
 
 " good when starting a new line
 set smartindent
@@ -43,10 +40,6 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-
-" Indent character
-let g:indentLine_char = '┆'
-let g:indentLine_color_term = 237
 
 " copy the previous indentation on autoindenting
 set copyindent
@@ -83,7 +76,6 @@ vnoremap > >gv
 " join lines with cursor staying in place
 nnoremap J mzJ`z
 
-" Fix MacOS problem when editing crontab file with the command 'crontab -e'
 set backupskip=/tmp/*,/private/tmp/*
 
 " SCROLLING
@@ -107,23 +99,8 @@ set nostartofline
 " change the mapleader from \ to ,
 let mapleader=","
 
-" easy :bd
-map <silent> <leader>bd :bd<cr>
-
 " delete all buffers
 map <silent> <leader>wp :1,9999bwipeout<cr>
-
-" select all
-nmap <leader>a ggVG
-
-" maximize vim window
-map <leader>m :let &lines=500<bar>let &columns=500<cr>
-
-" easy copy/paste from/to system clipboard
-map <leader>yy "*y
-map <leader>pp "*p
-map <leader>YY "*Y
-map <leader>PP "*P
 
 
 " SPLITS
@@ -138,12 +115,6 @@ au! VimResized * :wincmd =
 " only have cursorline in current window
 au! WinLeave * set nocursorline
 au! WinEnter * set cursorline
-
-" move splits around
-nnoremap <leader>sl <c-w><s-h>
-nnoremap <leader>sr <c-w><s-l>
-nnoremap <leader>st <c-w><s-k>
-nnoremap <leader>sb <c-w><s-j>
 
 " open all buffers in vertical split
 map <silent> <leader>vb :vertical :ball<cr>
@@ -184,9 +155,6 @@ set guicursor=a:blinkon0
 
 " always show status bar
 set laststatus=2
-
-" my status line
-set statusline=\ #%n\ %f\ %m\ %r\ Line\ %l\ %P\ \ Column\ %c%=\ [%{&ff}]\ %{&ft}
 
 " higher command line
 set cmdheight=2
@@ -239,10 +207,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-" easy tab navigation
-map <s-l> :tabnext<cr>
-map <s-h> :tabprevious<cr>
-
 " move the cursor in insert mode
 imap <c-h> <c-o>h
 imap <c-j> <c-o>j
@@ -260,15 +224,7 @@ au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
 au BufNewFile,BufRead *.ejs set filetype=html
 
 
-" SPELLING
-" ==============================================
-" fix my common spelling mistakes
-iab slef self
-iab tihs this
-iab functino function
-iab getElementByID getElementById
-
-
 " CONTROL P
 " ==============================================
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
+
