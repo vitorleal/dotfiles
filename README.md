@@ -16,15 +16,15 @@ $ source osx.sh
 
 ## Vim, Bash
 
-To config my [Vim](http://www.vim.org/) settings and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) configs, alias and exports just run the ```install.sh```
+To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the ```install.sh```
 
-It will copy all the **.** files for you
+It will copy all the **dot (.)** files for you
 
 ```
 $ source install.sh
 ```
 
-After that install the **Vim** plugins using [Vundle](https://github.com/gmarik/Vundle.vim)
+After that you can install the **Vim** plugins using [Vundle](https://github.com/gmarik/Vundle.vim)
 
 ```
 $ vim +PluginInstall +qall
@@ -33,7 +33,7 @@ $ vim +PluginInstall +qall
 
 ## Homebrew
 
-To install all my comandline apps using [homebrew](http://brew.sh/)
+To install all my commandline apps using [homebrew](http://brew.sh/)
 
 ```
 $ source brew.sh
@@ -51,7 +51,7 @@ $ source cask.sh
 
 ## NPM
 
-To install the [NPM](http://npmjs.com) modules
+To install the [NPM](http://npmjs.com) global modules
 
 ```
 $ source npm.sh
@@ -70,3 +70,4 @@ In terminal app go to **Preferences** > **Import** and choose the file to import
 | [![twitter/vitorleal](http://gravatar.com/avatar/e133221d7fbc0dee159dca127d2f6f00?s=80)](http://twitter.com/vitorleal "Follow @vitorleal on Twitter") |
 |---|
 | [Vitor Leal](http://vitorleal.com) |
+
