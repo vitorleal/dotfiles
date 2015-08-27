@@ -22,7 +22,7 @@ filetype plugin on
 filetype indent on
 
 "color options
-color Dracula
+color gruvbox
 
 " use unix as standard file type
 set fileformats=unix,dos,mac

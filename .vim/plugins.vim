@@ -21,7 +21,7 @@ Plugin 'gorodinskiy/vim-coloresque'
 Plugin 'scrooloose/nerdcommenter'
 
 " Color
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 filetype plugin indent on
