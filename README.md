@@ -5,6 +5,11 @@
 ![My Terminal Colors](http://i.imgur.com/oxyVDqE.png)
 
 
+## Typeface
+
+I use the open typeface  [Hack](http://sourcefoundry.org/hack/)
+
+
 ## OSX defaults
 
 To configurate a new Mac with my default settings
@@ -16,7 +21,7 @@ $ source osx.sh
 
 ## Vim, Bash
 
-To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the ```install.sh```
+To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the **install.sh**
 
 It will copy all the **dot (.)** files for you
 
@@ -60,7 +65,7 @@ $ source npm.sh
 
 ## Terminal Colors
 
-The file ```my.terminal``` has the color settigns to use in the Mac's **Terminal** app
+The file **my.terminal** has the color settigns to use in the Mac's **Terminal** app
 
 In terminal app go to **Preferences** > **Import** and choose the file to import. After that set it as **default**
 
