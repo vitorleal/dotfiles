@@ -17,13 +17,11 @@ installcask imagealpha
 
 # Others
 installcask transmission
-installcask vlc
 installcask skype
 installcask alfred
 installcask cleanmymac
 installcask evernote
 installcask transmit
-installcask licecap
 installcask android-file-transfer
 installcask the-unarchiver
 installcask chromecast
@@ -42,13 +40,11 @@ installcask pgadmin3
 installcask rdm
 
 # Code
-installcask vagrant
 installcask virtualbox
 installcask kaleidoscope
 installcask dash
 installcask processing
 installcask android-studio
 installcask wireshark
-installcask zoc6
 installcask anybar
 
