@@ -72,6 +72,9 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 # Github
 alias gh="open http://github.com/vitorleal"
 
+
+# github repo
+# Open the git repository in the browser if git remote origin is defined
 function gh_repo() {
   if [[ $(git remote -v 2> /dev/null) ]]; then
     git remote -v | grep origin | awk '{ print $2 }' | head -1 | xargs open
