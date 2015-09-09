@@ -9,7 +9,7 @@ files=(
   "./.bash_prompt"
   "./.bashrc"
   "./.exports"
-  "./.gitcofig"
+  "./.gitconfig"
   "./.gitignore"
   "./.screenrc"
   "./.vim"
