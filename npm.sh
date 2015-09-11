@@ -10,5 +10,4 @@ installglobal mocha
 installglobal harp
 installglobal grunt-cli
 installglobal gulp
-installglobal speed-testp
-
+installglobal speed-test
