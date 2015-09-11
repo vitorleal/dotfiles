@@ -37,6 +37,9 @@ function home() {
   cd ~/$@
 }
 
+# Add space in the Dock
+alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
+
 # Random number
 # Usage: `rand` will produce a random number between 1 adn 6
 # Usage: `rand 100` will produce a random number between 1 and 100
