@@ -29,7 +29,6 @@ brew install python
 brew install ack
 brew install git
 brew install imagemagick
-brew install rename
 brew install tree
 brew install webkit2png
 brew install mongodb
