@@ -55,7 +55,6 @@ brew install postgis
 
 # Docker
 brew install docker
-brew install boot2docker
 brew install docker-compose
 
 # Brew cask -  to install native apps
