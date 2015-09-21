@@ -9,5 +9,6 @@ installglobal request
 installglobal mocha
 installglobal harp
 installglobal grunt-cli
+installglobal grunt
 installglobal gulp
 installglobal speed-test
