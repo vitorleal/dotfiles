@@ -34,7 +34,6 @@ brew install webkit2png
 brew install mongodb
 brew install phantomjs
 brew install sqlite
-brew install mysql
 brew install lua
 brew install nvm
 brew install ffmpeg
