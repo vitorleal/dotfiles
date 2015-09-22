@@ -29,9 +29,6 @@ fi
 # Shortcuts
 alias v="vim +NERDTreeToggle"
 
-# Docker compose
-alias dcompose="docker-compose"
-
 # Quick home
 function home() {
   cd ~/$@
