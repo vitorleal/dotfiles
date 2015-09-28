@@ -33,22 +33,18 @@ brew install tree
 brew install webkit2png
 brew install mongodb
 brew install phantomjs
-brew install sqlite
 brew install lua
 brew install nvm
 brew install ffmpeg
 brew install w3m
 brew install mosquitto
-brew install rabbitmq
 brew install android-sdk
 brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
 brew install lsusb
-brew install tesseract
 brew install cloc
 brew install ngrep
-brew install zeromq
 brew install postgresql
 brew install postgis
 
