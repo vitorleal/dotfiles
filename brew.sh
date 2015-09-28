@@ -60,11 +60,6 @@ brew install docker-compose
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
 
-# Install R
-brew tap homebrew/science
-brew install gcc
-brew install r
-
 # Clean it up
 brew cleanup
 
