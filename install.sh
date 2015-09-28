@@ -24,11 +24,14 @@ for file in ${files[@]}; do
       [ -r "$file" ] && cp "$file" $HOME && echo "  - Copied file $file"
     fi;
 done;
-
 unset file files;
 
+# Reload the bash profile
+echo "• Reload the bash profile"
+source $HOME/.bashrc
 
-# HomeBrew
+
+# Homebrew
 echo "• Check if Homebrew is installed"
 
 if [[ $(which brew) != "" ]]; then
@@ -38,6 +41,9 @@ else
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   echo "  - Done installing Homebrew"
 fi;
+
+echo "• Install Homebrew apps"
+source brew.sh
 
 
 # Preparing VIM and Vundle Plugins
