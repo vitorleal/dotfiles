@@ -43,7 +43,6 @@ brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
 brew install lsusb
-brew install cloc
 brew install ngrep
 brew install postgresql
 brew install postgis
