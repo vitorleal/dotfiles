@@ -67,6 +67,8 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 # Github
 alias gh="open http://github.com/vitorleal"
 
+# Docker compose
+alias dcompose="docker-compose"
 
 # github repo
 # Open the git repository in the browser if git remote origin is defined
