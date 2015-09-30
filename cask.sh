@@ -35,7 +35,7 @@ installcask fritzing
 installcask applepi-baker
 
 # Database
-installcask robomongo
+installcask mongohub
 installcask sequel-pro
 installcask pgadmin3
 installcask rdm
