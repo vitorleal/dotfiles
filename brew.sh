@@ -46,6 +46,7 @@ brew install lsusb
 brew install ngrep
 brew install postgresql
 brew install postgis
+brew install cloc
 
 # Docker
 brew install docker
