@@ -23,7 +23,6 @@ installcask cleanmymac
 installcask evernote
 installcask transmit
 installcask android-file-transfer
-installcask the-unarchiver
 installcask chromecast
 installcask iterm2
 
