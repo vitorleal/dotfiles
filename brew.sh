@@ -26,6 +26,7 @@ brew install homebrew/dupes/screen
 brew install python
 
 # Install everything else.
+brew inatall nmap
 brew install ack
 brew install git
 brew install imagemagick
