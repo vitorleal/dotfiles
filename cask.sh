@@ -25,6 +25,7 @@ installcask transmit
 installcask android-file-transfer
 installcask chromecast
 installcask iterm2
+installcask 1password
 
 # Arduino
 installcask arduino
