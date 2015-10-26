@@ -226,5 +226,5 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " CONTROL P
 " ==============================================
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|node_modules|ENV|bower_components)$'
 
