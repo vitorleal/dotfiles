@@ -48,6 +48,7 @@ brew install ngrep
 brew install postgresql
 brew install postgis
 brew install cloc
+brew install youtube-dl
 
 # Docker
 brew install docker
