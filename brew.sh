@@ -26,7 +26,7 @@ brew install homebrew/dupes/screen
 brew install python
 
 # Install everything else.
-brew inatall nmap
+brew install nmap
 brew install ack
 brew install git
 brew install imagemagick
@@ -43,12 +43,15 @@ brew install android-sdk
 brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
-brew install lsusb
 brew install ngrep
 brew install postgresql
 brew install postgis
 brew install cloc
 brew install youtube-dl
+
+# lsusb
+brew tap jlhonora/lsusb
+brew install lsusb
 
 # Docker
 brew install docker
