@@ -44,7 +44,8 @@
 
 [merge] # Include summaries of merged commits in newly created merge commit messages
   log = true
-	tool = Kaleidoscope
+	tool = vimdiff
+	conflictstyle = diff3
 
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
