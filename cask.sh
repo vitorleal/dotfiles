@@ -8,7 +8,6 @@ function installcask() {
 # Browsers
 installcask google-chrome
 installcask google-chrome-canary
-installcask google-drive
 installcask firefoxdeveloperedition
 
 # Images
@@ -16,6 +15,7 @@ installcask imageoptim
 installcask imagealpha
 
 # Others
+installcask google-drive
 installcask transmission
 installcask skype
 installcask alfred
@@ -29,7 +29,6 @@ installcask 1password
 
 # Arduino
 installcask arduino
-installcask fritzing
 
 # Raspberry Pi
 installcask applepi-baker
@@ -38,7 +37,6 @@ installcask applepi-baker
 installcask mongohub
 installcask sequel-pro
 installcask pgadmin3
-installcask rdm
 
 # Code
 installcask virtualbox
