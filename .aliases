@@ -45,15 +45,24 @@ function rand() {
 alias rand=rand
 
 # Get a password in keychain
-# Usage `getPassword {ssid}`
-function getPassword() {
+# Usage `getpassword {ssid}`
+function getpassword() {
   if [[ -n "$@" ]]; then
     security find-generic-password -ga $@ | grep "password:"
   else
-    echo "You should pass an ssid to search for in keychain: getPassword {ssid}"
+
+    airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+    ssid="`$airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
+
+    if [[ "$ssid" != "" ]]; then
+      getpassword $ssid
+      return
+    fi;
+
+    echo "ERROR: You are not connected to any wifi so you should pass an ssid to search for: getpassword {ssid}"
   fi;
 }
-alias getPassword=getPassword
+alias getpassword=getpassword
 
 # Quick move
 alias home=home
