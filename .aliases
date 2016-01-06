@@ -44,6 +44,17 @@ function rand() {
 }
 alias rand=rand
 
+# Get a password in keychain
+# Usage `getPassword {ssid}`
+function getPassword() {
+  if [[ -n "$@" ]]; then
+    security find-generic-password -ga $@ | grep "password:"
+  else
+    echo "You should pass an ssid to search for in keychain: getPassword {ssid}"
+  fi;
+}
+alias getPassword=getPassword
+
 # Quick move
 alias home=home
 
