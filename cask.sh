@@ -22,7 +22,6 @@ installcask alfred
 installcask cleanmymac
 installcask evernote
 installcask transmit
-installcask android-file-transfer
 installcask chromecast
 installcask iterm2
 installcask 1password
