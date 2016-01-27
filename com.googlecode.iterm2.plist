@@ -325,7 +325,7 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>193 190 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 773 0 0 1280 777 </string>
+	<string>0 26 1280 751 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>5 948 1279 761 -332 800 1920 1057 </string>
 	<key>New Bookmarks</key>
@@ -885,7 +885,7 @@
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
@@ -932,7 +932,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Silence Bell</key>
-			<false/>
+			<true/>
 			<key>Smart Cursor Color</key>
 			<true/>
 			<key>Smart Selection Rules</key>
@@ -1059,7 +1059,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>464113827.50323999</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>473358146.20489103</real>
+	<real>475526837.16603303</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1124,7 +1124,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-01-01T16:21:58Z</date>
+	<date>2016-01-26T18:47:14Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
