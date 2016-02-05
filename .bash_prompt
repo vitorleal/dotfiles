@@ -43,6 +43,11 @@ function parse_git_dirty() {
   [[ $(git status 2> /dev/null | tail -n 1 | grep -i -v 'nothing' | wc -l | tr -s " ") == " 1" ]] && echo "[+]"
 }
 
+# Check if branch is ahead of remote
+function parse_branch_ahead() {
+  [[ $(git status -sb 2> /dev/null | grep -i 'ahead' | wc -l | tr -s " ") == " 1" ]] && echo "[ahead]"
+}
+
 # Chech whitch branch we are
 function parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/{\1}/"
@@ -54,5 +59,5 @@ PS2="\[$YELLOW\]🚀  ➜ \[$RESET\]";
 PS1="\[\e]2;$PWD\[\a\]\[\e]1;\]$(basename "$(dirname "$PWD")")/\W\[\a\]";
 PS1+="\[${BOLD}${MAGENTA}\]\u\[$WHITE\]@\[$ORANGE\]\h \[$WHITE\]in ";
 PS1+="\[$YELLOW\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")";
-PS1+="\[$PURPLE\]\$(parse_git_branch)\[$RESET\] \[$GREEN\]\$(parse_git_dirty)\[$RESET\]\n$PS2";
+PS1+="\[$PURPLE\]\$(parse_git_branch)\[$RESET\] \[$GREEN\]\$(parse_git_dirty)\[$RESET\] \[$GREEN\]\$(parse_branch_ahead)\[$RESET\]\n$PS2";
 
