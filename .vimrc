@@ -22,6 +22,8 @@ filetype plugin on
 filetype indent on
 
 "color options
+set background=dark
+let g:gruvbox_contrast_dark="hard"
 color gruvbox
 
 " use unix as standard file type
