@@ -36,8 +36,8 @@
   commit = green
   meta = yellow
   frag = cyan
-  old = red
-  new = green
+  old = red bold
+  new = green bold
   whitespace = red reverse
 
 [color "diff-highlight"]
