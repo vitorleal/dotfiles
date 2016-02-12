@@ -436,11 +436,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>782 317 224 325 0 0 1280 777 </string>
+	<string>296 270 224 325 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>189 172 924 485 0 0 1280 777 </string>
+	<string>180 205 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 16 1279 761 0 0 1280 777 </string>
+	<string>0 4 1280 773 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>9 -12 1279 762 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -603,11 +603,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.10980392247438431</real>
 				<key>Green Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.10980392247438431</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.10980392247438431</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1025,11 +1025,11 @@
 			<key>Selection Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.83921569585800171</real>
 				<key>Green Component</key>
-				<real>0.28639751672744751</real>
+				<real>0.64705884456634521</real>
 				<key>Red Component</key>
-				<real>0.117613285779953</real>
+				<real>0.28627452254295349</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -1174,7 +1174,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>464113827.50323999</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>476889104.79081601</real>
+	<real>476990967.059174</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
