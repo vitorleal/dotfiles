@@ -8,7 +8,8 @@ function installcask() {
 # Browsers
 installcask google-chrome
 installcask google-chrome-canary
-installcask firefoxdeveloperedition
+installcask torbrowser
+installcask firefox
 
 # Images
 installcask imageoptim
