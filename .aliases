@@ -70,9 +70,8 @@ alias home=home
 # Reload bashrc
 alias reload=". ~/.bashrc"
 
-# Move to site folder
-alias site="cd ~/Sites"
-alias sites="cd ~/Sites"
+# Move to Code folder
+alias code="cd ~/Code"
 
 # Apps
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
@@ -87,8 +86,17 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iO
 # Github
 alias gh="open http://github.com/vitorleal"
 
-# Docker compose
+# Docker
 alias dcompose="docker-compose"
+
+function dockerenv() {
+  if [[ -n "$@" ]]; then
+    eval $(docker-machine env $@)
+
+  else
+    eval $(docker-machine env docker-vm)
+  fi;
+}
 
 # github repo
 # Open the git repository in the browser if git remote origin is defined
