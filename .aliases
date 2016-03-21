@@ -94,7 +94,7 @@ function dockerenv() {
     eval $(docker-machine env $@)
 
   else
-    eval $(docker-machine env docker-vm)
+    eval $(docker-machine env default)
   fi;
 }
 
