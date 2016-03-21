@@ -404,7 +404,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Sites/dotfiles</string>
+	<string>~/Code/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -440,9 +440,9 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>180 205 924 485 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 773 0 0 1280 777 </string>
+	<string>0 37 1279 740 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>9 -12 1279 762 0 0 1280 777 </string>
+	<string>0 37 1279 740 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1171,10 +1171,12 @@
 			<string>/Users/vitorleal</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveShownPromoWithId_4</key>
+	<true/>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>464113827.50323999</real>
+	<real>477938110.96039402</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>476990967.059174</real>
+	<real>479880815.449754</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1223,7 +1225,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/vitorleal/Sites/dotfiles</string>
+	<string>/Users/vitorleal/Code/dotfiles</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1239,7 +1241,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-02-12T12:26:50Z</date>
+	<date>2016-03-18T11:48:01Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
