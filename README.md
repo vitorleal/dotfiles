@@ -18,6 +18,10 @@ To configurate a new Mac with my default settings
 $ source osx.sh
 ```
 
+## Git
+
+Remember to update your user **name** and **email** in the file `.gitconfig`.
+
 
 ## Vim, Bash
 

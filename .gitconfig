@@ -17,8 +17,8 @@
   whitespace = fix
 
 [user]
-  name = Vitor Leal
-  email = vitorleal1@gmail.com
+  name = Your User Name
+  email = yourusername@email.com
 
 [core]
   excludesfile = ~/.gitignore
