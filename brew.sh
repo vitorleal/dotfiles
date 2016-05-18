@@ -32,21 +32,15 @@ brew install ack
 brew install git
 brew install imagemagick
 brew install tree
-brew install webkit2png
 brew install mongodb
-brew install phantomjs
-brew install lua
 brew install nvm
 brew install ffmpeg
 brew install w3m
-brew install mosquitto
 brew install android-sdk
 brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
 brew install ngrep
-brew install postgresql
-brew install postgis
 brew install cloc
 brew install youtube-dl
 
@@ -55,7 +49,6 @@ brew tap jlhonora/lsusb
 brew install lsusb
 
 # Docker
-brew install docker
 brew install docker-compose
 
 # Brew cask -  to install native apps

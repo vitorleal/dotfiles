@@ -40,10 +40,9 @@ installcask pgadmin3
 
 # Code
 installcask virtualbox
-installcask kaleidoscope
 installcask dash
-installcask processing
 installcask android-studio
 installcask wireshark
 installcask anybar
+installcask docker
 

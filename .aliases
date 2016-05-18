@@ -1,6 +1,3 @@
-alias cl="clear"
-alias ex="exit"
-
 # Easier navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -20,9 +17,6 @@ alias pdfmerge='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 if [[ "$OSTYPE" =~ ^darwin ]]; then
   alias ls="command ls -G"
 fi
-
-# Shortcuts
-alias v="vim +NERDTreeToggle"
 
 # Quick home
 function home() {
@@ -84,19 +78,7 @@ alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # Github
-alias gh="open http://github.com/vitorleal"
-
-# Docker
-alias dcompose="docker-compose"
-
-function dockerenv() {
-  if [[ -n "$@" ]]; then
-    eval $(docker-machine env $@)
-
-  else
-    eval $(docker-machine env default)
-  fi;
-}
+alias gh="open https://github.com/vitorleal"
 
 # github repo
 # Open the git repository in the browser if git remote origin is defined
