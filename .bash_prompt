@@ -40,17 +40,17 @@ fi;
 
 # Check if branch has changes
 function parse_git_dirty() {
-  [[ $(git status 2> /dev/null | tail -n 1 | grep -i -v 'nothing' | wc -l | tr -s " ") == " 1" ]] && echo "[+] "
+  [[ $(git status 2> /dev/null | tail -n 1 | grep -i -v 'nothing' | wc -l | tr -s " ") == " 1" ]] && echo "(+) "
 }
 
 # Check if branch is ahead of remote
 function parse_branch_ahead() {
-  [[ $(git status -sb 2> /dev/null | grep -i 'ahead' | wc -l | tr -s " ") == " 1" ]] && echo "[ahead] "
+  [[ $(git status -sb 2> /dev/null | grep -i 'ahead' | wc -l | tr -s " ") == " 1" ]] && echo "[⇡ ahead] "
 }
 
 # Check if branch is behind of remote
 function parse_branch_behind() {
-  [[ $(git status -sb 2> /dev/null | grep -i 'behind' | wc -l | tr -s " ") == " 1" ]] && echo "[behind]"
+  [[ $(git status -sb 2> /dev/null | grep -i 'behind' | wc -l | tr -s " ") == " 1" ]] && echo "[⇣ behind]"
 }
 
 # Chech whitch branch we are
