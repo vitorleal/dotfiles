@@ -96,7 +96,7 @@ alias ghrepo=gh_repo
 # Open the git branch in the browser
 function gh_branch() {
   branch="`git rev-parse --abbrev-ref HEAD`"
-  repo="`git remote -v | grep origin | awk '{ print $2 }' | head -1`"
+  repo="`git remote -v | grep origin | awk '{ print $2 }' | head -1 | sed 's/\.git//'`"
 
   open "$repo/tree/$branch"
 }
