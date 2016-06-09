@@ -78,6 +78,12 @@ alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # Github
+alias gp="git push origin"
+alias gpf="git push -f origin"
+alias gch="git checkout"
+alias gchm="git checkout master"
+
+# Github
 alias gh="open https://github.com/vitorleal"
 
 # github repo
