@@ -32,24 +32,20 @@ brew install ack
 brew install git
 brew install imagemagick
 brew install tree
-brew install mongodb
 brew install nvm
 brew install ffmpeg
 brew install w3m
-brew install android-sdk
 brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
 brew install ngrep
 brew install cloc
 brew install youtube-dl
+brew install thefuck
 
 # lsusb
 brew tap jlhonora/lsusb
 brew install lsusb
-
-# Docker
-brew install docker-compose
 
 # Brew cask -  to install native apps
 brew install phinze/cask/brew-cask
