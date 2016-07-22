@@ -19,7 +19,6 @@ installcask imagealpha
 installcask google-drive
 installcask transmission
 installcask skype
-installcask alfred
 installcask cleanmymac
 installcask evernote
 installcask transmit
@@ -36,13 +35,12 @@ installcask applepi-baker
 # Database
 installcask mongohub
 installcask sequel-pro
-installcask pgadmin3
 
 # Code
 installcask virtualbox
 installcask dash
 installcask android-studio
-installcask wireshark
 installcask anybar
 installcask docker
+installcask charles
 
