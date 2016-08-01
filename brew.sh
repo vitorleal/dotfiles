@@ -48,9 +48,6 @@ brew install youtube-dl
 brew tap jlhonora/lsusb
 brew install lsusb
 
-# Docker
-brew install docker-compose
-
 # Brew cask -  to install native apps
 brew install phinze/cask/brew-cask
 brew tap caskroom/versions
