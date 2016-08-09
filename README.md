@@ -1,8 +1,8 @@
-# My .dotfiles colection :gem:
+# My precious .dotfiles :gem:
 
 [![Dotfiles](https://img.shields.io/badge/dot-files-green.svg)](https://dotfiles.github.io/)
 
-![My Terminal Colors](http://i.imgur.com/oxyVDqE.png)
+![My Terminal Colors](http://i.imgur.com/oGP6knz.png)
 
 
 ## Typeface
@@ -18,6 +18,7 @@ To configurate a new Mac with my default settings
 $ source osx.sh
 ```
 
+
 ## Git
 
 Remember to update your user **name** and **email** in the file `.gitconfig`.
@@ -27,16 +28,26 @@ Remember to update your user **name** and **email** in the file `.gitconfig`.
 
 To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the **install.sh**
 
-It will copy all the **dot (.)** files for you
+It will:
+- ask for your git **user** and **email** to configurate using `git config --global`
+- install [Homebrew](http://brew.sh/) if you don't have
+- copy the **dot (.)** files to your home path
+  -  `.aliases`
+  - `.bash_profile`
+  - `.bash_prompt`
+  - `.bashrc`
+  - `.exports`
+  - `.gitconfig`
+  - `.gitignore`
+  - `.screenrc`
+  - `.vim`
+  - `.vimrc`
+- install the Vim plugins using [Vundle](https://github.com/VundleVim/Vundle.vim)
+
+Just run:
 
 ```
 $ source install.sh
-```
-
-After that you can install the **Vim** plugins using [Vundle](https://github.com/gmarik/Vundle.vim)
-
-```
-$ vim +PluginInstall +qall
 ```
 
 
