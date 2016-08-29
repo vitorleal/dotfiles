@@ -42,7 +42,6 @@ brew install jpeg
 brew install x264
 brew install ngrep
 brew install cloc
-brew install youtube-dl
 
 # lsusb
 brew tap jlhonora/lsusb
