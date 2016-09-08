@@ -32,7 +32,6 @@ brew install ack
 brew install git
 brew install imagemagick
 brew install tree
-brew install mongodb
 brew install nvm
 brew install ffmpeg
 brew install w3m
