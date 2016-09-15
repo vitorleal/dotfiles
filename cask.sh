@@ -29,9 +29,6 @@ installcask 1password
 # Arduino
 installcask arduino
 
-# Raspberry Pi
-installcask applepi-baker
-
 # Database
 installcask mongohub
 installcask sequel-pro
