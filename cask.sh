@@ -26,7 +26,6 @@ installcask telegram
 installcask evernote
 installcask transmit
 installcask chromecast
-installcask iterm2
 
 # Arduino
 installcask arduino
