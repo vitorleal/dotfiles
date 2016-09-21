@@ -23,16 +23,23 @@ installcask chromecast
 installcask vlc
 installcask spotify
 installcask telegram
-installcask cyberduck
+installcask evernote
+installcask transmit
+installcask chromecast
+installcask iterm2
+
+# Arduino
+installcask arduino
 
 # Database
 installcask mongohub
 installcask sequel-pro
-installcask pgadmin3
 
 # Code
-installcask virtualbox
 installcask dash
 installcask dockertoolbox
 installcask sublime-text-3
 installcask postman
+installcask android-studio
+installcask anybar
+installcask docker
