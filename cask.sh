@@ -36,6 +36,7 @@ installcask sequel-pro
 # Code
 installcask virtualbox
 installcask dash
+installcask java
 installcask android-studio
 installcask anybar
 installcask docker
