@@ -39,6 +39,7 @@ installcask dash
 installcask dockertoolbox
 installcask sublime-text-3
 installcask postman
+installcask java
 installcask android-studio
 installcask anybar
 installcask docker
