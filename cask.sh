@@ -34,6 +34,7 @@ installcask mongohub
 installcask sequel-pro
 
 # Code
+installcask gpgtools
 installcask virtualbox
 installcask dash
 installcask android-studio
