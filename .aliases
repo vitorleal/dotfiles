@@ -78,6 +78,17 @@ alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # Github
+alias gs="git status"
+alias gf="git fetch"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gp="git push origin"
+alias gpf="git push -f origin"
+alias gch="git checkout"
+alias gchb="git checkout -b"
+alias gchm="git checkout master"
+
+# Github
 alias gh="open https://github.com/vitorleal"
 
 # github repo
@@ -107,3 +118,5 @@ alias ghbranch=gh_branch
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
+#sublime text 3
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'

@@ -35,12 +35,13 @@ brew install tree
 brew install nvm
 brew install ffmpeg
 brew install w3m
-brew install android-sdk
 brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
 brew install ngrep
 brew install cloc
+brew install youtube-dl
+brew install thefuck
 
 # lsusb
 brew tap jlhonora/lsusb
