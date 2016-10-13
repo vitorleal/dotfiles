@@ -37,6 +37,7 @@ installcask sequel-pro
 installcask gpgtools
 installcask virtualbox
 installcask dash
+installcask java
 installcask android-studio
 installcask anybar
 installcask docker
