@@ -23,6 +23,8 @@ function home() {
   cd ~/$@
 }
 
+alias prettyjson="python -m json.tool | pygmentize -l json"
+
 # Add space in the Dock
 alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
 
