@@ -19,11 +19,6 @@ $ source osx.sh
 ```
 
 
-## Git
-
-Remember to update your user **name** and **email** in the file `.gitconfig`.
-
-
 ## Vim, Bash
 
 To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the **install.sh**
