@@ -61,7 +61,7 @@ echo ""
 
 
 # Preparing VIM and Vundle Plugins
-echo "• Preperaing Vim and Vundle Plugins"
+echo "• Preparing Vim and Vundle Plugins"
 
 if [[ -r "$HOME/.vim/bundle/Vundle.vim" ]]; then
   echo "  - Vundle already installed. Lets install the plugins"
