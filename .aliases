@@ -28,6 +28,12 @@ alias prettyjson="python -m json.tool | pygmentize -l json"
 # Add space in the Dock
 alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
 
+# Sha1 generation
+function sha1() {
+  echo -n $@ | openssl sha1
+}
+alias sha1=sha1
+
 # Random number
 # Usage: `rand` will produce a random number between 1 adn 6
 # Usage: `rand 100` will produce a random number between 1 and 100
