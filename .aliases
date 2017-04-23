@@ -23,6 +23,7 @@ function home() {
   cd ~/$@
 }
 
+# Pretty json
 alias prettyjson="python -m json.tool | pygmentize -l json"
 
 # Add space in the Dock
