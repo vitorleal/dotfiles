@@ -24,7 +24,11 @@ filetype indent on
 "color options
 set background=dark
 let g:gruvbox_contrast_dark="hard"
-color gruvbox
+color dracula
+
+" vim icons file type
+set encoding=utf8
+let g:airline_powerline_fonts = 1
 
 " use unix as standard file type
 set fileformats=unix,dos,mac
@@ -181,7 +185,7 @@ set nobackup noswapfile
 set shortmess=atI
 
 " stop annoying noise
-set visualbell
+"set visualbell
 
 " restore messed up vim and splits
 map <F5> :redraw!<cr><c-w>=
