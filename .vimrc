@@ -202,7 +202,7 @@ set nofoldenable
 " SIDEBAR
 " =============================================
 map <Leader>s :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 
 " NAVIGATION
@@ -232,5 +232,5 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " CONTROL P
 " ==============================================
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)|(node_modules|ENV|bower_components)$'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)|(node_modules|ENV|bower_components|__pycache__)$'
 
