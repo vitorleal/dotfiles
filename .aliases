@@ -98,7 +98,6 @@ function gh_repo() {
     echo "Can't find 'origin' repository in this path"
   fi
 }
-
 alias ghrepo=gh_repo
 
 # github branch
@@ -109,8 +108,14 @@ function gh_branch() {
 
   open "$repo/tree/$branch"
 }
-
 alias ghbranch=gh_branch
+
+# get information about an ec2 instance
+function ec2_info() {
+  aws ec2 describe-instances --filters "Name=tag:Name,Values=$@"
+}
+alias ec2_info=ec2_info
+
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
