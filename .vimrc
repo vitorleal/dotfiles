@@ -79,6 +79,10 @@ set synmaxcol=500
 vnoremap < <gv
 vnoremap > >gv
 
+" after a :vim[grep] map the :cn and :cp
+nmap <silent> - :cprevious<cr>
+nmap <silent> = :cnext<cr>
+
 " join lines with cursor staying in place
 nnoremap J mzJ`z
 
@@ -201,7 +205,7 @@ set nofoldenable
 
 " SIDEBAR
 " =============================================
-map <Leader>s :NERDTreeToggle<CR>
+map <leader>s :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 
 
