@@ -41,6 +41,7 @@ brew install jpeg
 brew install x264
 brew install ngrep
 brew install cloc
+brew install tldr
 
 # lsusb.
 brew tap jlhonora/lsusb
