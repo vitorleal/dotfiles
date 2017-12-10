@@ -26,9 +26,6 @@ installcask chromecast
 installcask iterm2
 installcask 1password
 
-# Arduino
-installcask arduino
-
 # Database
 installcask mongohub
 installcask sequel-pro
