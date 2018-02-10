@@ -81,10 +81,13 @@ for file in ${files[@]}; do
 done;
 
 unset file files;
+export PATH="/usr/local/sbin:$PATH"
+
+# Export Go Path
+export GOPATH="${HOME}/Code/ingresse/go"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vitorleal/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/vitorleal/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/vitorleal/Documents/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/vitorleal/Documents/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/vitorleal/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/vitorleal/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/sbin:$PATH"
+if [ -f '/Users/vitorleal/Documents/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/vitorleal/Documents/google-cloud-sdk/completion.zsh.inc'; fi

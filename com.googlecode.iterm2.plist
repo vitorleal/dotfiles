@@ -668,13 +668,13 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>440 497 400 129 0 0 1280 778 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>330 290 620 392 0 0 1280 778 </string>
+	<string>330 307 620 392 0 0 1280 800 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 76 599 519 0 0 1280 800 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 244 918 485 0 0 1280 800 </string>
+	<string>273 244 796 473 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 4 1280 774 0 0 1280 778 </string>
+	<string>0 0 1280 663 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 26 1280 751 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -1543,6 +1543,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/vitorleal/Code/dotfiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
@@ -1560,7 +1562,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-02T15:17:35Z</date>
+	<date>2017-12-12T17:29:39Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1614,7 +1616,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

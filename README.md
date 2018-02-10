@@ -7,7 +7,7 @@
 
 ## Typeface
 
-I use the open typeface  [Hack](http://sourcefoundry.org/hack/)
+I use the open typeface  [FiraCode](https://github.com/tonsky/FiraCode)
 
 
 ## OSX defaults
