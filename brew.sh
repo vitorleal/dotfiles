@@ -2,7 +2,7 @@
 
 # Install command-line tools using Homebrew.
 brew update
-brew upgrade --all
+brew upgrade
 
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
