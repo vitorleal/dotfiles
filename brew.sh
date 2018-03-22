@@ -46,10 +46,6 @@ brew install tldr
 brew tap jlhonora/lsusb
 brew install lsusb
 
-# Brew cask - to install native apps.
-brew install phinze/cask/brew-cask
-brew tap caskroom/versions
-
 # Clean it up.
 brew cleanup
 
