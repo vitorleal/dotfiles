@@ -23,8 +23,6 @@ filetype indent on
 
 "color options
 set background=dark
-let g:gruvbox_contrast_dark="hard"
-color dracula
 
 " vim icons file type
 set encoding=utf8
@@ -57,7 +55,7 @@ set nowrap
 set number
 
 " highlight current line
-set cursorline
+"set cursorline
 
 " auto load files when hanged outside of Vim
 set autoread
@@ -70,10 +68,10 @@ hi TrailWhitespace ctermbg=198 guibg=#f62c73
 match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " use many undos
-set undolevels=1000
+set undolevels=500
 
 " do not syntax highlight too long lines
-set synmaxcol=500
+set synmaxcol=300
 
 " keep selection to indent/outdent
 vnoremap < <gv
@@ -160,9 +158,6 @@ nmap N Nzz
 " wider number width
 set numberwidth=6
 
-" disable blinking cursor
-set guicursor=a:blinkon0
-
 " always show status bar
 set laststatus=2
 
@@ -191,9 +186,6 @@ set shortmess=atI
 " stop annoying noise
 "set visualbell
 
-" restore messed up vim and splits
-map <F5> :redraw!<cr><c-w>=
-
 
 " FOLDS
 " ==============================================
@@ -216,12 +208,6 @@ map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
-
-" move the cursor in insert mode
-imap <c-h> <c-o>h
-imap <c-j> <c-o>j
-imap <c-k> <c-o>k
-imap <c-l> <c-o>l
 
 
 " AUTOCOMMANDS
