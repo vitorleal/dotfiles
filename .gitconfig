@@ -64,3 +64,11 @@
 [mergetool]
 	prompt = false
 
+[help]
+	autocorrect = 0
+
+[diff]
+	tool = vimdiff
+
+[commit]
+	gpgsign = true
