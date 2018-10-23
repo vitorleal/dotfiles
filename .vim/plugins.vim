@@ -12,10 +12,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'sheerun/vim-polyglot'
-
 
 call vundle#end()
 filetype plugin indent on
