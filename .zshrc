@@ -52,7 +52,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker fabric python pip django php)
+plugins=(git docker fabric python pip django php zsh-iterm-touchbar)
 
 source $ZSH/oh-my-zsh.sh
 
