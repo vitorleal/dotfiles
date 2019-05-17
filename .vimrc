@@ -54,24 +54,17 @@ set nowrap
 " show line numbers
 set number
 
-" highlight current line
-"set cursorline
-
 " auto load files when hanged outside of Vim
 set autoread
 
 " allow hidden buffers
 set hidden
 
-" color trailing whitespace
-hi TrailWhitespace ctermbg=198 guibg=#f62c73
-match TrailWhitespace /\s\+$\| \+\ze\t/
-
 " use many undos
-set undolevels=500
+set undolevels=50
 
 " do not syntax highlight too long lines
-set synmaxcol=300
+set synmaxcol=150
 
 " keep selection to indent/outdent
 vnoremap < <gv
@@ -156,7 +149,7 @@ nmap N Nzz
 " TERMINAL
 " ==============================================
 " wider number width
-set numberwidth=6
+set numberwidth=4
 
 " always show status bar
 set laststatus=2
@@ -167,9 +160,6 @@ set cmdheight=2
 " get rid of separation chars
 set fillchars=""
 
-" http://items.sjbach.com/319/configuring-vim-right
-set wildmenu
-
 " set terminal title
 set title
 
@@ -178,13 +168,6 @@ set autochdir
 
 " no backup/swap files
 set nobackup noswapfile
-
-" shorten vim messages
-" see :h shortmess for the breakdown of what this changes
-set shortmess=atI
-
-" stop annoying noise
-"set visualbell
 
 
 " FOLDS
@@ -198,7 +181,7 @@ set nofoldenable
 " SIDEBAR
 " =============================================
 map <leader>s :NERDTreeToggle<cr>
-let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'deps', '_build']
 
 
 " NAVIGATION
@@ -222,5 +205,4 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 " CONTROL P
 " ==============================================
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)|(node_modules|ENV|bower_components|__pycache__)$'
-
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)|(node_modules|ENV|env|bower_components|__pycache__|_build|deps)$'
