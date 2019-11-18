@@ -117,6 +117,13 @@ function ec2_info() {
 alias ec2_info=ec2_info
 
 
+# docker ip
+function docker_ip() {
+  docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
+}
+alias docker_ip=docker_ip
+
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"

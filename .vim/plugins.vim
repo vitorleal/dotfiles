@@ -14,6 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 call vundle#end()
 filetype plugin indent on

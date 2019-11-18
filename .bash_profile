@@ -37,7 +37,3 @@ done;
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   source $(brew --prefix)/etc/bash_completion;
 fi;
-
-# Android SDK ADB
-export ANDROID_HOME=$HOME/Library/Android/sdk
-
