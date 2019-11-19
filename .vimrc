@@ -11,12 +11,15 @@ let $MYPLUGINS = '~/.vim/plugins.vim'
 exe 'so '.$MYPLUGINS
 
 
+vmap '' :w !pbcopy<CR><CR>
+
 " EDITION
 " ==============================================
 syntax enable
 
 " basic edition stuff on
 syntax on
+
 filetype on
 filetype plugin on
 filetype indent on
