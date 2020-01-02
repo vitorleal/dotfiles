@@ -821,6 +821,8 @@
 	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>EnableDivisionView</key>
+	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
@@ -948,7 +950,7 @@
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HideTabNumber</key>
 	<false/>
 	<key>HighlightTabLabels</key>
@@ -1059,7 +1061,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>267 223 796 486 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 675 0 0 1440 877 </string>
+	<string>0 0 1440 675 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>176 425 570 452 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -1656,7 +1658,7 @@
 			<key>Mouse Reporting</key>
 			<true/>
 			<key>Name</key>
-			<string>Default</string>
+			<string>my-term</string>
 			<key>Non Ascii Font</key>
 			<string>Hack-Regular 15</string>
 			<key>Non-ASCII Anti Aliased</key>
@@ -1674,7 +1676,7 @@
 			<key>Screen</key>
 			<integer>-2</integer>
 			<key>Scrollback Lines</key>
-			<integer>5000</integer>
+			<integer>1000</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
 			<key>Scrollback in Alternate Screen</key>
@@ -1706,6 +1708,8 @@
 				<key>text</key>
 				<string></string>
 			</dict>
+			<key>Send Bell Alert</key>
+			<false/>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Set Local Environment Vars</key>
@@ -1713,7 +1717,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
@@ -1965,13 +1969,14 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.6</string>
-		<string>3.2.9</string>
+		<string>3.3.4</string>
 		<string>3.3.1</string>
 		<string>3.3.3</string>
 		<string>3.3.5</string>
+		<string>3.3.7</string>
+		<string>3.2.9</string>
 		<string>3.3.0</string>
 		<string>3.3.2</string>
-		<string>3.3.4</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -1985,7 +1990,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1440, 900}}</string>
 		<key>topLeft</key>
-		<string>{277, 685}</string>
+		<string>{406, 807}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -1996,7 +2001,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>D154D915-0D17-49DA-B572-30353C3BD208</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>18</integer>
+	<integer>19</integer>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -2738,6 +2743,8 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
+		<string>amount</string>
+		<string>stone</string>
 		<string>js-sdk</string>
 		<string>fced1ccc-7e87-44f9-83bf-7a9ae29af6a6\</string>
 		<string>postbacks/picpay</string>
@@ -2746,8 +2753,6 @@
 		<string>postbacks.</string>
 		<string>hml-</string>
 		<string>hmlb-</string>
-		<string>hmlv</string>
-		<string>$country</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>574785456.52103698</real>
@@ -2812,6 +2817,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/vitorleal/Code/dotfiles</string>
+	<key>PreserveWindowSizeWhenTabBarVisibilityChanges</key>
+	<false/>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -2831,11 +2838,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-11-18T21:04:27Z</date>
+	<date>2019-11-29T15:57:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
@@ -2855,7 +2862,9 @@
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.59999999999999998</real>
 	<key>StatusBarPosition</key>
-	<integer>0</integer>
+	<integer>1</integer>
+	<key>StretchTabsToFillBar</key>
+	<true/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -2899,7 +2908,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.6</string>
+	<string>3.3.7</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
