@@ -67,7 +67,7 @@ set hidden
 set undolevels=50
 
 " do not syntax highlight too long lines
-set synmaxcol=150
+set synmaxcol=120
 
 " keep selection to indent/outdent
 vnoremap < <gv
@@ -185,15 +185,6 @@ set nofoldenable
 " =============================================
 map <leader>s :NERDTreeToggle<cr>
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'deps', '_build']
-
-
-" NAVIGATION
-" ==============================================
-" easy window navigation
-map <c-h> <c-w>h
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
 
 
 " AUTOCOMMANDS
