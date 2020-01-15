@@ -3,6 +3,12 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias ios-sdk="cd ~/Workspace/Ingresse/ios-sdk"
+alias ingresse-iOS="cd ~/Workspace/Ingresse/ingresse-ios"
+alias app-iOS="cd ~/Workspace/Ingresse/ticketbooth-ios"
+alias app-Android="cd ~/Workspace/Ingresse/ticketbooth-android"
+alias backstage-iOS="cd ~/Workspace/Ingresse/backstage-ios"
+alias backstage-Android="cd ~/Workspace/Ingresse/backstage-android"
 
 # List alias
 alias l="ls -l"
@@ -99,6 +105,17 @@ function gh_repo() {
   fi
 }
 alias ghrepo=gh_repo
+
+# bitbucket repo
+# Open the git repository in the browser if git remote origin is defined
+function bb_repo() {
+  if [[ $(git remote -v 2> /dev/null) ]]; then
+    git remote -v | grep origin | awk '{ repo=substr($2, 1, length($2)-length(".git")); print repo"/src" }' | head -1 | xargs open
+  else
+    echo "Can't find 'origin' repository in this path"
+  fi
+}
+alias bbrepo=bb_repo
 
 # github branch
 # Open the git branch in the browser
