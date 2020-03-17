@@ -7,7 +7,7 @@
 
 ## Typeface
 
-I use the open typeface  [FiraCode](https://github.com/tonsky/FiraCode)
+I use the typeface  [FiraCode](https://github.com/tonsky/FiraCode)
 
 
 ## OSX defaults
@@ -19,9 +19,9 @@ $ source osx.sh
 ```
 
 
-## Vim, Bash
+## Vim, ZSH
 
-To config my [Vim](http://www.vim.org/) and [Bash](http://en.wikipedia.org/wiki/Bash_(Unix_shell)) settings just run the **install.sh**
+To config my [Vim](http://www.vim.org/) and [OhMyZSH](https://ohmyz.sh/) settings just run the **install.sh**
 
 It will:
 - ask for your git **user** and **email** to configurate using `git config --global`
@@ -48,7 +48,7 @@ $ source install.sh
 
 ## Homebrew
 
-To install all my commandline apps using [homebrew](http://brew.sh/)
+To install all my command line apps using [homebrew](http://brew.sh/)
 
 ```
 $ source brew.sh
@@ -62,22 +62,6 @@ To install all my apps using [Homebrew Cask](http://caskroom.io/)
 ```
 $ source cask.sh
 ```
-
-
-## NPM
-
-To install the [NPM](http://npmjs.com) global modules
-
-```
-$ source npm.sh
-```
-
-
-## Terminal Colors
-
-The file **my.terminal** has the color settigns to use in the Mac's **Terminal** app
-
-In terminal app go to **Preferences** > **Import** and choose the file to import. After that set it as **default**
 
 
 ## Author

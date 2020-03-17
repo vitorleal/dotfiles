@@ -86,9 +86,6 @@ alias chrome="open -a google\ chrome"
 alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
-# Github
-alias gh="open https://github.com/vitorleal"
-
 # github repo
 # Open the git repository in the browser if git remote origin is defined
 function gh_repo() {

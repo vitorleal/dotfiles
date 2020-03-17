@@ -5,9 +5,6 @@ echo "• Putting dotfiles in your home path: $HOME"
 
 files=(
   "./.aliases"
-  "./.bash_profile"
-  "./.bash_prompt"
-  "./.bashrc"
   "./.exports"
   "./.gitconfig"
   "./.gitignore"
@@ -35,12 +32,6 @@ git config --global user.name "$git_name"
 
 read -p "  - What your Git user.email? " git_email
 git config --global user.email $git_email
-echo ""
-
-
-# Reload the bash profile
-echo "• Reload the bash profile"
-source $HOME/.bashrc
 echo ""
 
 

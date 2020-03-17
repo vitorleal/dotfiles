@@ -11,11 +11,16 @@ let $MYPLUGINS = '~/.vim/plugins.vim'
 exe 'so '.$MYPLUGINS
 
 
-vmap '' :w !pbcopy<CR><CR>
-
 " EDITION
 " ==============================================
+if (has("termguicolors"))
+ set termguicolors
+endif
+
 syntax enable
+set background=dark
+let g:lightline = { 'colorscheme': 'nightowl' }
+
 
 " basic edition stuff on
 syntax on
@@ -24,8 +29,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-"color options
-set background=dark
+" Set '' to copy selection to pasteboard
+vmap '' :w !pbcopy<CR><CR>
 
 " vim icons file type
 set encoding=utf8
@@ -88,12 +93,6 @@ set backupskip=/tmp/*,/private/tmp/*
 set scrolloff=3
 set sidescrolloff=5
 
-" scroll viewport faster
-nnoremap <c-e> 5<c-e>
-nnoremap <c-y> 5<c-y>
-vnoremap <c-e> 5<c-e>
-vnoremap <c-y> 5<c-y>
-
 " keep cursor in position when moving around
 set nostartofline
 
@@ -102,9 +101,6 @@ set nostartofline
 " ==============================================
 " change the mapleader from \ to ,
 let mapleader=","
-
-" delete all buffers
-map <silent> <leader>wp :1,9999bwipeout<cr>
 
 
 " SPLITS
@@ -184,7 +180,7 @@ set nofoldenable
 " SIDEBAR
 " =============================================
 map <leader>s :NERDTreeToggle<cr>
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'deps', '_build']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'deps', '_build', 'node_modules', 'bower_components']
 
 
 " AUTOCOMMANDS
@@ -194,7 +190,6 @@ au! BufWritePre * :%s/\s\+$//e
 
 " set current path to current file parent directory for better use of :find
 au! BufEnter * silent! let &path = expand('%:p:h') . '/**'
-au BufNewFile,BufRead *.ejs set filetype=html
 
 
 " CONTROL P
