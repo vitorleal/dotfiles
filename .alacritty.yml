@@ -34,3 +34,6 @@ colors:
     magenta: '0xc792ea'
     cyan:    '0x7fdbca'
     white:   '0xffffff'
+
+window:
+  startup_mode: Fullscreen
