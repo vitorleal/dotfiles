@@ -9,10 +9,6 @@ alias l="ls -l"
 alias la="ls -la"
 alias lsd='ls -l | grep "^d"'
 
-# Merge PDF files
-# Usage: `pdfmerge -o output.pdf input{1,2,3}.pdf`
-alias pdfmerge='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
-
 # Set ls color for MacOS
 if [[ "$OSTYPE" =~ ^darwin ]]; then
   alias ls="command ls -G"
@@ -22,6 +18,15 @@ fi
 function home() {
   cd ~/$@
 }
+
+# Quick move
+alias home=home
+
+# Move to Code folder
+alias code="cd ~/Code"
+
+# Move to Download folder
+alias downloads="cd ~/Downloads"
 
 # Pretty json
 alias prettyjson="python -m json.tool | pygmentize -l json"
@@ -67,26 +72,14 @@ function getpassword() {
 }
 alias getpassword=getpassword
 
-# Quick move
-alias home=home
-
 # Reload bashrc
-alias reload=". ~/.bashrc"
-
-# Move to Code folder
-alias code="cd ~/Code"
+alias reload=". ~/.zshrc"
 
 # Apps
 alias xcode="open -a '/Developer/Applications/Xcode.app'"
-alias filemerge="open -a '/Developer/Applications/Utilities/FileMerge.app'"
 alias safari="open -a safari"
-alias firefox="open -a firefoxdeveloperedition"
-alias opera="open -a opera"
 alias chrome="open -a google\ chrome"
-alias canary="open -a google\ chrome\ canary"
-alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
-# github repo
 # Open the git repository in the browser if git remote origin is defined
 function gh_repo() {
   if [[ $(git remote -v 2> /dev/null) ]]; then
@@ -97,7 +90,6 @@ function gh_repo() {
 }
 alias ghrepo=gh_repo
 
-# github branch
 # Open the git branch in the browser
 function gh_branch() {
   branch="`git rev-parse --abbrev-ref HEAD`"
@@ -107,14 +99,13 @@ function gh_branch() {
 }
 alias ghbranch=gh_branch
 
-# get information about an ec2 instance
+# Get information about an ec2 instance
 function ec2_info() {
   aws ec2 describe-instances --filters "Name=tag:Name,Values=$@"
 }
 alias ec2_info=ec2_info
 
-
-# docker ip
+# Docker ip
 function docker_ip() {
   docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }

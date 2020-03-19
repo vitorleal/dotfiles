@@ -4,15 +4,15 @@ export EDITOR="vim"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Brew Cask opts
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# NVM
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
