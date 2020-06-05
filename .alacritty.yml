@@ -36,4 +36,4 @@ colors:
     white:   '0xffffff'
 
 window:
-  startup_mode: Fullscreen
+  startup_mode: Maximized
