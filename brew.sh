@@ -35,21 +35,20 @@ brew install nvm
 brew install ffmpeg
 brew install w3m
 brew install android-sdk
-brew install homebrew/apache/ab
 brew install jpeg
 brew install x264
-brew install ngrep
 brew install cloc
 brew install tldr
 brew install gh
 brew install ctop
+# Rip Grep
 brew install rg
+# Find replace
 brew install fd
+# Cat replace
+brew install bat
+brew install htop
 brew install glances
-
-# lsusb.
-brew tap jlhonora/lsusb
-brew install lsusb
 
 # Clean it up.
 brew cleanup
