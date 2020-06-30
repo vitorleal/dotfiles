@@ -10,7 +10,7 @@ ENABLE_CORRECTION="false"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git docker python pip virtualenv go rust mix kubectl minikube postgres)
+plugins=(git docker python pip go rust mix kubectl minikube postgres heroku z osx)
 
 source $ZSH/oh-my-zsh.sh
 
