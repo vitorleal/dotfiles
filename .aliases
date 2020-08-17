@@ -3,12 +3,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ios-sdk="cd ~/Workspace/Ingresse/ios-sdk"
-alias ingresse-iOS="cd ~/Workspace/Ingresse/ingresse-ios"
-alias app-iOS="cd ~/Workspace/Ingresse/ticketbooth-ios"
-alias app-Android="cd ~/Workspace/Ingresse/ticketbooth-android"
-alias backstage-iOS="cd ~/Workspace/Ingresse/backstage-ios"
-alias backstage-Android="cd ~/Workspace/Ingresse/backstage-android"
 
 # List alias
 alias l="ls -l"
@@ -93,7 +87,7 @@ alias canary="open -a google\ chrome\ canary"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # Github
-alias gh="open https://github.com/vitorleal"
+alias gh="open https://github.com/gitrubs"
 
 # github repo
 # Open the git repository in the browser if git remote origin is defined
