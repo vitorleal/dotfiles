@@ -37,3 +37,10 @@ colors:
 
 window:
   startup_mode: Maximized
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux"
