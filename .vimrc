@@ -72,7 +72,7 @@ set hidden
 set undolevels=50
 
 " do not syntax highlight too long lines
-set synmaxcol=120
+set synmaxcol=240
 
 " keep selection to indent/outdent
 vnoremap < <gv
