@@ -49,6 +49,7 @@ brew install fd
 brew install bat
 brew install htop
 brew install glances
+brew install asdf
 
 # Clean it up.
 brew cleanup
