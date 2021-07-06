@@ -50,6 +50,7 @@ brew install bat
 brew install htop
 brew install glances
 brew install asdf
+brew install tmux
 
 # Clean it up.
 brew cleanup
