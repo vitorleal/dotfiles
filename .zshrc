@@ -2,6 +2,7 @@ export PATH="$HOME/bin:$PATH";
 
 export ZSH=~/.oh-my-zsh
 
+
 export UPDATE_ZSH_DAYS=5
 
 ZSH_THEME="spaceship"
@@ -10,7 +11,7 @@ ENABLE_CORRECTION="false"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git docker python pip go rust mix kubectl minikube postgres heroku z osx)
+plugins=(git docker python pip go rust mix postgres z osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -30,6 +31,11 @@ for file in ${files[@]}; do
 done;
 
 unset file files;
+
 export PATH="/usr/local/sbin:$PATH"
 export GOPATH="${HOME}/Code/ingresse/go"
 export PATH=$PATH:/Users/vitorleal/Documents/flutter/bin
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+
+. /usr/local/opt/asdf/asdf.sh
