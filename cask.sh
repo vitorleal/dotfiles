@@ -36,3 +36,6 @@ installcask charles
 installcask mockoon
 installcask anybar
 installcask font-fira-code
+installcask fantastical
+installcask whatsapp
+installcask moom
