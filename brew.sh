@@ -31,7 +31,6 @@ brew install nmap
 brew install ack
 brew install imagemagick
 brew install tree
-brew install nvm
 brew install ffmpeg
 brew install w3m
 brew install android-sdk
@@ -51,6 +50,7 @@ brew install htop
 brew install glances
 brew install asdf
 brew install tmux
+brew install spaceship
 
 # Clean it up.
 brew cleanup

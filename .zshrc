@@ -33,9 +33,6 @@ done;
 unset file files;
 
 export PATH="/usr/local/sbin:$PATH"
-export GOPATH="${HOME}/Code/ingresse/go"
 export PATH=$PATH:/Users/vitorleal/Documents/flutter/bin
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-
-. /usr/local/opt/asdf/asdf.sh

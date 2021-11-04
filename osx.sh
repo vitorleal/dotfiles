@@ -23,7 +23,7 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
 # Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+for domain in ~/Library/Preferences/ByHost/com.apple.systempreferences.*; do
 	defaults write "${domain}" dontAutoLoad -array \
 		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \

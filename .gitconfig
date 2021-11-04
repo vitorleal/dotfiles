@@ -19,7 +19,6 @@
 
 [core]
   excludesfile = ~/.gitignore
-  pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
 
 [color] # Use colors in Git commands that are capable of colored output
   ui = auto

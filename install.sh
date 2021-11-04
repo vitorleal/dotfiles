@@ -10,7 +10,9 @@ files=(
   "./.gitignore"
   "./.screenrc"
   "./.vim"
+  "./tmux.conf"
   "./.vimrc"
+  "./.zshrc"
 )
 
 for file in ${files[@]}; do
@@ -50,6 +52,12 @@ echo "• Install Homebrew apps"
 source brew.sh
 echo ""
 
+# Install Oh My ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install spaceship theme
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 # Preparing VIM and Vundle Plugins
 echo "• Preparing Vim and Vundle Plugins"

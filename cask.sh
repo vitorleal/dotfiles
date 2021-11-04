@@ -2,8 +2,10 @@
 
 # Install cask apps
 function installcask() {
-	brew cask install "${@}" 2> /dev/null
+	brew install --cask "${@}" 2> /dev/null
 }
+
+brew tap homebrew/cask-fonts
 
 # Browsers
 installcask google-chrome
@@ -22,6 +24,7 @@ installcask gpgtools
 installcask docker
 installcask postman
 installcask insomnia
+installcask iterm2
 
 # Others
 installcask skype
@@ -32,4 +35,4 @@ installcask slack
 installcask charles
 installcask mockoon
 installcask anybar
-
+installcask font-fira-code
