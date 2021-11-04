@@ -39,3 +39,4 @@ installcask font-fira-code
 installcask fantastical
 installcask whatsapp
 installcask moom
+installcask openvpn-connect
