@@ -11,7 +11,7 @@ ENABLE_CORRECTION="false"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git docker python pip go rust mix postgres z osx)
+plugins=(git docker python pip rust mix postgres z macos asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -36,3 +36,5 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH=$PATH:/Users/vitorleal/Documents/flutter/bin
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
+GPG_TTY=$(tty)
+export GPG_TTY
