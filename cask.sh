@@ -25,6 +25,7 @@ installcask docker
 installcask postman
 installcask insomnia
 installcask iterm2
+installcask flutter
 
 # Others
 installcask skype
