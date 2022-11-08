@@ -40,6 +40,7 @@ brew install cloc
 brew install tldr
 brew install gh
 brew install ctop
+brew install gitleaks
 # Rip Grep
 brew install rg
 # Find replace
