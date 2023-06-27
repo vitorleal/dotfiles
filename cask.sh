@@ -29,7 +29,6 @@ installcask flutter
 
 # Others
 installcask skype
-installcask alacritty
 installcask 1password
 installcask notion
 installcask slack
@@ -40,4 +39,3 @@ installcask font-fira-code
 installcask fantastical
 installcask whatsapp
 installcask moom
-installcask openvpn-connect
