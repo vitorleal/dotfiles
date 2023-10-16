@@ -34,6 +34,12 @@ alias prettyjson="python -m json.tool | pygmentize -l json"
 # Add space in the Dock
 alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
 
+# Find CNPJ
+function cnpj() {
+  cd ~/Code/solfacil/tools/receita-go && go run find.go --cnpj=$@ && mv missing-output/empresas.csv ../../receita-federal/source && cd ../../receita-federal && mix run parse.exs
+}
+alias cnpj=cnpj
+
 # Sha1 generation
 function sha1() {
   echo -n $@ | openssl sha1
@@ -116,3 +122,6 @@ alias docker_ip=docker_ip
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
+# Proxy SQL
+alias devkiwifydb="./cloud-sql-proxy kiwify-dev:southamerica-east1:kiwify-app --gcloud-auth --port 5433"
+alias kiwifydb="./cloud-sql-proxy kiwicheckout:southamerica-east1:memberclub-pg-db --gcloud-auth"
