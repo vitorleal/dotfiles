@@ -10,7 +10,6 @@ brew tap homebrew/cask-fonts
 # Browsers
 installcask google-chrome
 installcask torbrowser
-installcask firefox
 
 # Images
 installcask imageoptim
@@ -33,7 +32,6 @@ installcask 1password
 installcask notion
 installcask slack
 installcask charles
-installcask mockoon
 installcask anybar
 installcask font-fira-code
 installcask fantastical
