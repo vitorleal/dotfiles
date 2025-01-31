@@ -73,4 +73,3 @@ else
   vim +PluginInstall +qall
   echo " - Done installing the Plugins"
 fi;
-
