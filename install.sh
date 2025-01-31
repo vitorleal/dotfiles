@@ -44,7 +44,7 @@ if [[ $(which brew) != "" ]]; then
   echo "  - Homebrew already installed"
 
 else
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   echo "  - Done installing Homebrew"
 fi;
 
