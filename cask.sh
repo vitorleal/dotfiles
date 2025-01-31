@@ -37,3 +37,7 @@ installcask font-fira-code
 installcask fantastical
 installcask whatsapp
 installcask moom
+installcask goland
+installcask chatgpt
+installcask lm-studio
+installcask gpg-suite

@@ -10,7 +10,7 @@ files=(
   "./.gitignore"
   "./.screenrc"
   "./.vim"
-  "./tmux.conf"
+  "./.tmux.conf"
   "./.vimrc"
   "./.zshrc"
 )
