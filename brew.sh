@@ -41,6 +41,7 @@ brew install tldr
 brew install gh
 brew install ctop
 brew install gitleaks
+brew install doggo
 # Rip Grep
 brew install rg
 # Find replace
@@ -55,4 +56,3 @@ brew install spaceship
 
 # Clean it up.
 brew cleanup
-
