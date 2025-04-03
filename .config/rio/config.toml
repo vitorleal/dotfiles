@@ -305,16 +305,17 @@ args = []
 # (considering if theme folder does exists and is being used)
 #
 # Example:
-# [colors]
-# background = '#0F0D0E'
-# foreground = '#F9F4DA'
-# cursor = '#F38BA3'
-# tabs = '#443d40'
-# tabs-active = '#F38BA3'
-# green = '#0BA95B'
-# red = '#ED203D'
-# blue = '#12B5E5'
-# yellow = '#FCBA28'
+[colors]
+background = '#1f2335'
+cursor = '#7aa2f7'
+green = '#c3e88d'
+red = '#ff757f'
+blue = '#7dcfff'
+yellow = '#ffc777'
+white = '#ffffff'
+black = '#090300'
+magenta = '#ff007c'
+cyan = '#7dcfff'
 
 # Bindings
 #

@@ -275,7 +275,127 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "ao"
+themes {
+  tokionight {
+    text_unselected {
+      base 61 89 161
+      background 31 35 53
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 187 154 247
+    }
+    text_selected {
+      base 192 202 245
+      background 59 66 97
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 157 124 216
+    }
+    ribbon_selected {
+      base 31 35 53
+      background 61 89 161
+      emphasis_0 31 35 53
+      emphasis_1 255 199 119
+      emphasis_2 187 154 247
+      emphasis_3 125 207 255
+    }
+    ribbon_unselected {
+      base 31 35 53
+      background 115 122 162
+      emphasis_0 31 35 53
+      emphasis_1 192 202 245
+      emphasis_2 125 207 255
+      emphasis_3 157 124 216
+    }
+    table_title {
+      base 61 89 161
+      background 31 35 53
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 187 154 247
+    }
+    table_cell_selected {
+      base 192 202 245
+      background 59 66 97
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 157 124 216
+    }
+    table_cell_unselected {
+      base 169 177 214
+      background 36 40 59
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 157 124 216
+    }
+    list_selected {
+      base 192 202 245
+      background 59 66 97
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 157 124 216
+    }
+    list_unselected {
+      base 169 177 214
+      background 31 35 53
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 61 89 161
+      emphasis_3 157 124 216
+    }
+    frame_selected {
+      base 192 202 245
+      background 31 35 53
+      emphasis_0 255 158 100
+      emphasis_1 122 162 247
+      emphasis_2 157 124 216
+      emphasis_3 0 0 0
+    }
+    frame_highlight {
+      base 255 158 100
+      background 31 35 53
+      emphasis_0 255 158 100
+      emphasis_1 255 158 100
+      emphasis_2 255 158 100
+      emphasis_3 255 158 100
+    }
+    exit_code_success {
+      base 61 89 161
+      background 31 35 53
+      emphasis_0 122 162 247
+      emphasis_1 0 0 0
+      emphasis_2 187 154 247
+      emphasis_3 125 207 255
+    }
+    exit_code_error {
+      base 31 35 53
+      background 31 35 53
+      emphasis_0 255 117 127
+      emphasis_1 0 0 0
+      emphasis_2 0 0 0
+      emphasis_3 0 0 0
+    }
+    multiplayer_user_colors {
+      player_1 187 154 247
+      player_2 125 207 255
+      player_3 66 214 190
+      player_4 255 199 119
+      player_5 122 162 247
+      player_6 255 0 124
+      player_7 197 59 83
+      player_8 195 232 141
+      player_9 66 214 190
+      player_10 66 214 190
+    }
+  }
+}
+theme "tokionight"
  
 // Choose the base input mode of zellij.
 // Default: normal
