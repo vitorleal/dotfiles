@@ -4,30 +4,28 @@
 
 ![My Terminal Colors](http://i.imgur.com/oGP6knz.png)
 
-
 ## Typeface
 
 I use the typeface  [FiraCode](https://github.com/tonsky/FiraCode)
-
 
 ## OSX defaults
 
 To configurate a new Mac with my default settings
 
 ```
-$ source osx.sh
+source osx.sh
 ```
 
+## ZSH
 
-## Vim, ZSH
-
-To config my [Vim](http://www.vim.org/) and [OhMyZSH](https://ohmyz.sh/) settings just run the **install.sh**
+To config my [OhMyZSH](https://ohmyz.sh/), [LazyVim](https://www.lazyvim.org/), [Zellij](https://zellij.dev/) and [Rio](https://rioterm.com) settings just run the **install.sh**
 
 It will:
+
 - ask for your git **user** and **email** to configurate using `git config --global`
 - install [Homebrew](http://brew.sh/) if you don't have
 - copy the **dot (.)** files to your home path
-  -  `.aliases`
+  - `.aliases`
   - `.bash_profile`
   - `.bash_prompt`
   - `.bashrc`
@@ -35,38 +33,32 @@ It will:
   - `.gitconfig`
   - `.gitignore`
   - `.screenrc`
-  - `.vim`
-  - `.vimrc`
-- install the Vim plugins using [Vundle](https://github.com/VundleVim/Vundle.vim)
+  - `.confif`
 
 Just run:
 
 ```
-$ source install.sh
+source install.sh
 ```
-
 
 ## Homebrew
 
 To install all my command line apps using [homebrew](http://brew.sh/)
 
 ```
-$ source brew.sh
+source brew.sh
 ```
-
 
 ## Homebrew Cask
 
 To install all my apps using [Homebrew Cask](http://caskroom.io/)
 
 ```
-$ source cask.sh
+source cask.sh
 ```
-
 
 ## Author
 
 | [![twitter/vitorleal](http://gravatar.com/avatar/e133221d7fbc0dee159dca127d2f6f00?s=80)](http://twitter.com/vitorleal "Follow @vitorleal on Twitter") |
 |---|
 | [Vitor Leal](http://vitorleal.com) |
-

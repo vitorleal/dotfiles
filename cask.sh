@@ -2,7 +2,7 @@
 
 # Install cask apps
 function installcask() {
-	brew install --cask "${@}" 2> /dev/null
+  brew install --cask "${@}" 2>/dev/null
 }
 
 brew tap homebrew/cask-fonts
@@ -23,11 +23,11 @@ installcask gpgtools
 installcask docker
 installcask postman
 installcask insomnia
-installcask iterm2
 installcask flutter
+installcask rio
+installcask lm-studio
 
 # Others
-installcask skype
 installcask 1password
 installcask notion
 installcask slack
@@ -37,7 +37,5 @@ installcask font-fira-code
 installcask fantastical
 installcask whatsapp
 installcask moom
-installcask goland
 installcask chatgpt
-installcask lm-studio
 installcask gpg-suite

@@ -9,23 +9,21 @@ files=(
   "./.gitconfig"
   "./.gitignore"
   "./.screenrc"
-  "./.vim"
+  "./.config"
   "./.tmux.conf"
-  "./.vimrc"
   "./.zshrc"
 )
 
 for file in ${files[@]}; do
-    if [[ $(file $file | awk '{print $2}') == "directory" ]]; then
-      [ -r "$file" ] && cp -r "$file" $HOME && echo "  - Copied folder $file"
+  if [[ $(file $file | awk '{print $2}') == "directory" ]]; then
+    [ -r "$file" ] && cp -r "$file" $HOME && echo "  - Copied folder $file"
 
-    else
-      [ -r "$file" ] && cp "$file" $HOME && echo "  - Copied file $file"
-    fi;
-done;
-unset file files;
+  else
+    [ -r "$file" ] && cp "$file" $HOME && echo "  - Copied file $file"
+  fi
+done
+unset file files
 echo ""
-
 
 # Git configuration
 echo "• Git / GitHub configuration"
@@ -36,7 +34,6 @@ read -p "  - What your Git user.email? " git_email
 git config --global user.email $git_email
 echo ""
 
-
 # Homebrew
 echo "• Check if Homebrew is installed"
 
@@ -46,7 +43,7 @@ if [[ $(which brew) != "" ]]; then
 else
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   echo "  - Done installing Homebrew"
-fi;
+fi
 
 echo "• Install Homebrew apps"
 source brew.sh
@@ -58,18 +55,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # Install spaceship theme
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-# Preparing VIM and Vundle Plugins
-echo "• Preparing Vim and Vundle Plugins"
-
-if [[ -r "$HOME/.vim/bundle/Vundle.vim" ]]; then
-  echo "  - Vundle already installed. Lets install the plugins"
-  vim +PluginInstall +qall
-  echo "  - Done installing the Plugins"
-
-else
-  echo "  - Lets install Vundle Plugin Manager"
-  git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
-  echo " - Done installing the Plugins"
-fi;
