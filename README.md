@@ -2,8 +2,6 @@
 
 [![Dotfiles](https://img.shields.io/badge/dot-files-green.svg)](https://dotfiles.github.io/)
 
-![My Terminal Colors](http://i.imgur.com/oGP6knz.png)
-
 ## Typeface
 
 I use the typeface  [FiraCode](https://github.com/tonsky/FiraCode)
