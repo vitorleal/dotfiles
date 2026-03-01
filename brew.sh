@@ -19,6 +19,7 @@ brew install bash-completion
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
+brew install nvim
 brew install grep
 brew install openssh
 brew install screen
@@ -51,8 +52,8 @@ brew install bat
 brew install htop
 brew install glances
 brew install asdf
-brew install tmux
 brew install spaceship
+brew install terminal-notifier
 
 # Clean it up.
 brew cleanup

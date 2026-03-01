@@ -15,4 +15,3 @@ export PATH=/opt/homebrew/bin:$PATH
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
-

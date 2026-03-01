@@ -34,12 +34,6 @@ alias prettyjson="python -m json.tool | pygmentize -l json"
 # Add space in the Dock
 alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
 
-# Find CNPJ
-function cnpj() {
-  cd ~/Code/solfacil/tools/receita-go && go run find.go --cnpj=$@ && mv missing-output/empresas.csv ../../receita-federal/source && cd ../../receita-federal && mix run parse.exs
-}
-alias cnpj=cnpj
-
 # Sha1 generation
 function sha1() {
   echo -n $@ | openssl sha1
