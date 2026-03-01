@@ -26,7 +26,7 @@
 # define x axis padding (default is 0)
 #
 # Example:
-# padding-x = 10
+padding-x = 0
 
 # Padding-y
 #
@@ -34,7 +34,7 @@
 # (default is [0, 0])
 #
 # Example:
-padding-y = [-5, 5]
+padding-y = [0, 0]
 
 # Option as Alt
 #
@@ -213,7 +213,7 @@ family = "Fira Code"
 # weight = 400
 #
 [fonts.bold]
-# family = "Fira Code"
+family = "Fira Code"
 # style = "normal"
 # weight = 800
 #
