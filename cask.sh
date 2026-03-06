@@ -39,3 +39,4 @@ installcask whatsapp
 installcask moom
 installcask chatgpt
 installcask gpg-suite
+installcask displaylink
