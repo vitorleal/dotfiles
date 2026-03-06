@@ -54,6 +54,7 @@ brew install glances
 brew install asdf
 brew install spaceship
 brew install terminal-notifier
+brew install claude
 
 # Clean it up.
 brew cleanup
