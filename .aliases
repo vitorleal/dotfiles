@@ -97,3 +97,6 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 alias vim="nvim"
 alias cat="bat"
 alias top="htop"
+
+# Claude Code (always use worktree isolation)
+alias claude="claude --worktree"
