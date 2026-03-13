@@ -10,8 +10,6 @@ _______________/\\\_____________________________________/\\\\\________/\\\\\\___
         _\///___\///////\//_____\/////_________\/////_______\///_______\///__\/////////____\//////////__\//////////__                                                                                                                                            
 ```
 
-[![Dotfiles](https://img.shields.io/badge/dot-files-green.svg)](https://dotfiles.github.io/)
-
 My macOS development environment setup — terminal, editor, shell, and system preferences.
 
 ## What's included
