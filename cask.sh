@@ -13,6 +13,7 @@ brew install --cask google-chrome
 ###############################################################################
 
 brew install --cask docker
+brew install --cask claude-code
 brew install --cask ghostty
 brew install --cask goland
 brew install --cask flutter

@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "idle_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\e]9;🤖 Claudinho Code: Pode falar\\a'"
+          }
+        ]
+      },
+      {
+        "matcher": "permission_prompt",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "printf '\\e]9;🤖 Claudinho Code: Ei, volta aqui!\\a'"
+          }
+        ]
+      }
+    ]
+  }
+}

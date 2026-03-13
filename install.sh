@@ -202,6 +202,36 @@ step_languages() {
   done <<< "$languages"
 }
 
+step_claude_code() {
+  gum style --border normal --padding "0 1" --foreground 4 "Configuring Claude Code"
+
+  if ! command -v claude &>/dev/null; then
+    gum style --foreground 3 "  Claude Code not found. Installing via Homebrew..."
+    brew install --cask claude-code
+  fi
+
+  mkdir -p "$HOME/.claude"
+
+  if [[ -f "$HOME/.claude/settings.json" ]]; then
+    # Merge hooks into existing settings using a temp file
+    local tmp
+    tmp=$(mktemp)
+    # Use python3 (ships with macOS) to merge hooks from dotfiles into existing settings
+    python3 -c "
+import json, sys
+with open('$HOME/.claude/settings.json') as f: existing = json.load(f)
+with open('claude-code/settings.json') as f: dotfiles = json.load(f)
+existing['hooks'] = dotfiles.get('hooks', {})
+with open('$tmp', 'w') as f: json.dump(existing, f, indent=2, ensure_ascii=False)
+print('merged')
+" && mv "$tmp" "$HOME/.claude/settings.json"
+    gum style --foreground 2 "  Merged notification hooks into existing settings."
+  else
+    cp claude-code/settings.json "$HOME/.claude/settings.json"
+    gum style --foreground 2 "  Copied Claude Code settings."
+  fi
+}
+
 step_macos() {
   gum style --border normal --padding "0 1" --foreground 4 "Applying macOS preferences"
 
@@ -233,13 +263,14 @@ main() {
   echo ""
 
   local steps
-  steps=$(gum choose --no-limit --selected "Dotfiles,Git Config,CLI Tools,GUI Apps,Oh My Zsh,Languages (asdf),macOS Preferences" \
+  steps=$(gum choose --no-limit --selected "Dotfiles,Git Config,CLI Tools,GUI Apps,Oh My Zsh,Languages (asdf),Claude Code,macOS Preferences" \
     "Dotfiles" \
     "Git Config" \
     "CLI Tools" \
     "GUI Apps" \
     "Oh My Zsh" \
     "Languages (asdf)" \
+    "Claude Code" \
     "macOS Preferences")
 
   echo ""
@@ -252,6 +283,7 @@ main() {
       "GUI Apps")           step_brew_cask ;;
       "Oh My Zsh")          step_oh_my_zsh ;;
       "Languages (asdf)")   step_languages ;;
+      "Claude Code")        step_claude_code ;;
       "macOS Preferences")  step_macos ;;
     esac
     echo ""

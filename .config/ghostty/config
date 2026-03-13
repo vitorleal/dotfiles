@@ -30,6 +30,9 @@ copy-on-select = clipboard
 # Mouse
 mouse-hide-while-typing = true
 
+# Desktop notifications (OSC 9/777)
+desktop-notifications = true
+
 # Scrollback
 scrollback-limit = 10000
 
