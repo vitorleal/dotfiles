@@ -81,7 +81,51 @@ step_git_config() {
 
   if gum confirm "Set up GPG signing for commits?"; then
     local gpg_key
-    gpg_key=$(gum input --placeholder "Your GPG key ID" --prompt "GPG Key: " --value "$(git config --global user.signingkey 2>/dev/null)")
+    gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null \
+      | grep -E 'sec\s+rsa[0-9]+/' | sed 's|.*/||' | awk '{print $1}' | head -1 || true)
+
+    if [[ -z "$gpg_key" ]]; then
+      gum style --foreground 3 "  No GPG key found. Generating a new one..."
+
+      local key_name key_email
+      key_name=$(gum input --placeholder "Full name for GPG key" --prompt "Name: " --value "$git_name")
+      key_email=$(gum input --placeholder "Email for GPG key" --prompt "Email: " --value "$git_email")
+
+      gpg --batch --gen-key <<GPGEOF
+%no-protection
+Key-Type: RSA
+Key-Length: 4096
+Subkey-Type: RSA
+Subkey-Length: 4096
+Name-Real: $key_name
+Name-Email: $key_email
+Expire-Date: 0
+%commit
+GPGEOF
+
+      gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null \
+        | grep -E 'sec\s+rsa4096/' | sed 's|.*/||' | awk '{print $1}' | head -1)
+      gum style --foreground 2 "  GPG key $gpg_key generated."
+
+      # Offer to add a second email UID
+      if gum confirm "Add another email to this GPG key?"; then
+        local extra_email
+        extra_email=$(gum input --placeholder "Additional email" --prompt "Email: ")
+        local fingerprint
+        fingerprint=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null \
+          | grep -A1 "^sec" | tail -1 | tr -d ' ')
+        gpg --quick-add-uid "$fingerprint" "$key_name <$extra_email>"
+        gum style --foreground 2 "  Added $extra_email to GPG key."
+      fi
+
+      # Copy public key to clipboard for GitHub
+      gpg --armor --export "$gpg_key" | pbcopy
+      gum style --foreground 3 "  Public key copied to clipboard — add it to GitHub (Settings > SSH and GPG keys)."
+      gum confirm "Press enter once you've added the key to GitHub" --affirmative "Done" --negative ""
+    else
+      gum style --foreground 2 "  Found existing GPG key: $gpg_key"
+    fi
+
     git config --global user.signingkey "$gpg_key"
     git config --global commit.gpgsign true
     gum style --foreground 2 "  GPG signing enabled with key $gpg_key"
