@@ -54,6 +54,15 @@
 [push]
   default = simple
 
+[pull]
+  rebase = true
+
+[init]
+  defaultBranch = main
+
+[gpg]
+  program = /opt/homebrew/bin/gpg
+
 [credential]
 	helper = osxkeychain
 

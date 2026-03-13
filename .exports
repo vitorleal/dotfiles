@@ -1,17 +1,17 @@
-# Make vim the default editor
-export EDITOR="vim"
+# Make nvim the default editor
+export EDITOR="nvim"
 
-# Don’t clear the screen after quitting a manual page
+# Don't clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
 # Android
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
-# Brew Cask opts
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# Homebrew
 export PATH=/opt/homebrew/bin:$PATH
+export PATH="/opt/homebrew/sbin:$PATH"
 
-# Larger bash history (allow 32³ entries; default is 500)
+# Larger bash history (allow 32^3 entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups

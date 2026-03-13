@@ -19,9 +19,6 @@ function home() {
   cd ~/$@
 }
 
-# Quick move
-alias home=home
-
 # Move to Code folder
 alias code="cd ~/Code"
 
@@ -29,7 +26,7 @@ alias code="cd ~/Code"
 alias downloads="cd ~/Downloads"
 
 # Pretty json
-alias prettyjson="python -m json.tool | pygmentize -l json"
+alias prettyjson="jq '.'"
 
 # Add space in the Dock
 alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type=\"spacer-tile\";}' | killall Dock"
@@ -38,10 +35,9 @@ alias add-dock-space="defaults write com.apple.dock persistent-apps -array-add '
 function sha1() {
   echo -n $@ | openssl sha1
 }
-alias sha1=sha1
 
 # Random number
-# Usage: `rand` will produce a random number between 1 adn 6
+# Usage: `rand` will produce a random number between 1 and 6
 # Usage: `rand 100` will produce a random number between 1 and 100
 function rand() {
   if [[ -n "$@" ]]; then
@@ -50,7 +46,6 @@ function rand() {
     echo $[RANDOM%6+1];
   fi;
 }
-alias rand=rand
 
 # Get a password in keychain
 # Usage `getpassword {ssid}`
@@ -58,7 +53,6 @@ function getpassword() {
   if [[ -n "$@" ]]; then
     security find-generic-password -ga $@ | grep "password:"
   else
-
     airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
     ssid="`$airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
 
@@ -70,48 +64,36 @@ function getpassword() {
     echo "ERROR: You are not connected to any wifi so you should pass an ssid to search for: getpassword {ssid}"
   fi;
 }
-alias getpassword=getpassword
 
-# Reload bashrc
+# Reload shell config
 alias reload=". ~/.zshrc"
 
 # Apps
-alias xcode="open -a '/Developer/Applications/Xcode.app'"
+alias xcode="open -a Xcode"
 alias safari="open -a safari"
 alias chrome="open -a google\ chrome"
 
-# Open the git repository in the browser if git remote origin is defined
-function gh_repo() {
-  if [[ $(git remote -v 2> /dev/null) ]]; then
-    git remote -v | grep origin | awk '{ print $2 }' | head -1 | xargs open
-  else
-    echo "Can't find 'origin' repository in this path"
-  fi
-}
-alias ghrepo=gh_repo
+# Open the git repository in the browser
+alias ghrepo="gh repo view --web"
 
 # Open the git branch in the browser
-function gh_branch() {
-  branch="`git rev-parse --abbrev-ref HEAD`"
-  repo="`git remote -v | grep origin | awk '{ print $2 }' | head -1 | sed 's/\.git//'`"
-
-  open "$repo/tree/$branch"
-}
-alias ghbranch=gh_branch
+alias ghbranch="gh browse --branch \$(git branch --show-current)"
 
 # Get information about an ec2 instance
 function ec2_info() {
   aws ec2 describe-instances --filters "Name=tag:Name,Values=$@"
 }
-alias ec2_info=ec2_info
 
 # Docker ip
 function docker_ip() {
   docker inspect --format '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$@"
 }
-alias docker_ip=docker_ip
-
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# Modern tool aliases
+alias vim="nvim"
+alias cat="bat"
+alias top="htop"

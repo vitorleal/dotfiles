@@ -1,5 +1,6 @@
 # Compiled Python files
 *.pyc
+*.log
 
 # Folder view configuration files
 .DS_Store
@@ -17,5 +18,9 @@ Thumbs.db
 node_modules
 npm-debug.log
 
-# screen
-screenlog*
+# Environment files
+.env
+.env.*
+
+# Claude Code
+.claude/

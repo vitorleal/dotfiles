@@ -1,0 +1,37 @@
+# Ghostty Terminal Configuration
+
+# Font
+font-family = "Fira Code"
+font-size = 14
+
+# Theme (Tokyo Night)
+theme = tokyonight_night
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Window
+window-padding-x = 0
+window-padding-y = 0
+fullscreen = true
+window-decoration = true
+macos-titlebar-style = hidden
+
+# Shell (Zellij multiplexer)
+command = /opt/homebrew/bin/zellij
+
+# macOS specific
+macos-option-as-alt = left
+
+# Clipboard
+copy-on-select = clipboard
+
+# Mouse
+mouse-hide-while-typing = true
+
+# Scrollback
+scrollback-limit = 10000
+
+# Don't prompt on close (Zellij handles sessions)
+confirm-close-surface = false
