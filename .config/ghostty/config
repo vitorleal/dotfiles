@@ -5,7 +5,7 @@ font-family = "Fira Code"
 font-size = 14
 
 # Theme (Tokyo Night)
-theme = tokyonight_night
+theme = "TokyoNight Night"
 
 # Cursor
 cursor-style = block
