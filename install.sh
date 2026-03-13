@@ -10,21 +10,21 @@ RESET="\033[0m"
 # Helpers
 # ─────────────────────────────────────────────────────────────────────────────
 
-ensure_gum() {
-  if ! command -v gum &>/dev/null; then
-    echo "gum is required for this installer. Installing via Homebrew..."
-    brew install gum
+ensure_homebrew() {
+  if ! command -v brew &>/dev/null; then
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    echo "Homebrew installed."
+  else
+    echo "Homebrew already installed."
   fi
 }
 
-ensure_homebrew() {
-  if ! command -v brew &>/dev/null; then
-    gum spin --spinner dot --title "Installing Homebrew..." -- \
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    gum style --foreground 2 "Homebrew installed."
-  else
-    gum style --foreground 2 "Homebrew already installed."
+ensure_gum() {
+  if ! command -v gum &>/dev/null; then
+    echo "Installing gum..."
+    brew install gum
   fi
 }
 
@@ -141,6 +141,7 @@ step_macos() {
 # ─────────────────────────────────────────────────────────────────────────────
 
 main() {
+  ensure_homebrew
   ensure_gum
 
   gum style \
@@ -151,10 +152,6 @@ main() {
     --bold \
     "Dotfiles Installer" \
     "github.com/vitorleal/dotfiles"
-
-  echo ""
-
-  ensure_homebrew
 
   echo ""
 
