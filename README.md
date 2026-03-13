@@ -28,7 +28,8 @@ It will prompt you to select from:
 - **Git Config** — set your name, email, and GPG signing key
 - **CLI Tools** — install command-line tools via Homebrew (`brew.sh`)
 - **GUI Apps** — install desktop apps via Homebrew Cask (`cask.sh`)
-- **Oh My Zsh** — install Oh My Zsh if not present
+- **Oh My Zsh** — install Oh My Zsh and Spaceship prompt if not present
+- **Languages (asdf)** — install latest Go, Node.js, Elixir, and Rust via asdf
 - **macOS Preferences** — apply system defaults (`osx.sh`)
 
 ## Files

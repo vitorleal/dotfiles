@@ -125,6 +125,39 @@ step_oh_my_zsh() {
   fi
 }
 
+step_languages() {
+  gum style --border normal --padding "0 1" --foreground 4 "Installing programming languages via asdf"
+
+  if ! command -v asdf &>/dev/null; then
+    gum style --foreground 1 "  asdf not found. Run 'CLI Tools' step first."
+    return
+  fi
+
+  local languages
+  languages=$(gum choose --no-limit --selected "golang,nodejs,elixir,rust" \
+    "golang" \
+    "nodejs" \
+    "elixir" \
+    "rust")
+
+  while IFS= read -r lang; do
+    [[ -z "$lang" ]] && continue
+
+    if asdf plugin list 2>/dev/null | grep -q "^${lang}$"; then
+      gum style --foreground 3 "  $lang plugin already added."
+    else
+      gum spin --spinner dot --title "Adding asdf plugin $lang..." -- \
+        asdf plugin add "$lang"
+      gum style --foreground 2 "  $lang plugin added."
+    fi
+
+    gum spin --spinner dot --title "Installing latest $lang..." -- \
+      asdf install "$lang" latest
+    asdf set --home "$lang" latest
+    gum style --foreground 2 "  $lang latest installed and set as global default."
+  done <<< "$languages"
+}
+
 step_macos() {
   gum style --border normal --padding "0 1" --foreground 4 "Applying macOS preferences"
 
@@ -156,12 +189,13 @@ main() {
   echo ""
 
   local steps
-  steps=$(gum choose --no-limit --selected "Dotfiles,Git Config,CLI Tools,GUI Apps,Oh My Zsh,macOS Preferences" \
+  steps=$(gum choose --no-limit --selected "Dotfiles,Git Config,CLI Tools,GUI Apps,Oh My Zsh,Languages (asdf),macOS Preferences" \
     "Dotfiles" \
     "Git Config" \
     "CLI Tools" \
     "GUI Apps" \
     "Oh My Zsh" \
+    "Languages (asdf)" \
     "macOS Preferences")
 
   echo ""
@@ -173,6 +207,7 @@ main() {
       "CLI Tools")          step_brew_cli ;;
       "GUI Apps")           step_brew_cask ;;
       "Oh My Zsh")          step_oh_my_zsh ;;
+      "Languages (asdf)")   step_languages ;;
       "macOS Preferences")  step_macos ;;
     esac
     echo ""
