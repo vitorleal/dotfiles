@@ -129,8 +129,8 @@ step_languages() {
   gum style --border normal --padding "0 1" --foreground 4 "Installing programming languages via asdf"
 
   if ! command -v asdf &>/dev/null; then
-    gum style --foreground 1 "  asdf not found. Run 'CLI Tools' step first."
-    return
+    gum spin --spinner dot --title "Installing asdf..." -- brew install asdf
+    gum style --foreground 2 "  asdf installed."
   fi
 
   local languages
