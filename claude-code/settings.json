@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]9;🤖 Claudinho Code: Pode falar\\a'"
+            "command": "terminal-notifier -title '🤖 Claudinho Code' -message 'Pode falar' -sound default"
           }
         ]
       },
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]9;🤖 Claudinho Code: Ei, volta aqui!\\a'"
+            "command": "terminal-notifier -title '🤖 Claudinho Code' -message 'Ei, volta aqui!' -sound default"
           }
         ]
       }

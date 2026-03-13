@@ -38,6 +38,7 @@ It will prompt you to select from:
 - **GUI Apps** — install desktop apps via Homebrew Cask (`cask.sh`)
 - **Oh My Zsh** — install Oh My Zsh and Spaceship prompt if not present
 - **Languages (asdf)** — install latest Go, Node.js, Elixir, and Rust via asdf
+- **Claude Code** — install Claude Code and configure notification hooks (`terminal-notifier`)
 - **macOS Preferences** — apply system defaults (`osx.sh`)
 
 ## Files
@@ -52,6 +53,7 @@ It will prompt you to select from:
 .config/ghostty/    # Ghostty terminal config
 .config/nvim/       # Neovim (LazyVim) config
 .config/zellij/     # Zellij multiplexer config
+claude-code/        # Claude Code settings (notification hooks)
 brew.sh             # CLI tools (Homebrew)
 cask.sh             # GUI apps (Homebrew Cask)
 osx.sh              # macOS system preferences
