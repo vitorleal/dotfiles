@@ -287,7 +287,7 @@ main() {
 
   echo ""
 
-  while IFS= read -r step; do
+  while IFS= read -r step <&3; do
     case "$step" in
       "Dotfiles")           step_dotfiles ;;
       "Git Config")         step_git_config ;;
@@ -299,7 +299,7 @@ main() {
       "macOS Preferences")  step_macos ;;
     esac
     echo ""
-  done <<< "$steps"
+  done 3<<< "$steps"
 
   # Offer to re-run setup scripts
   if gum confirm "Re-run any setup scripts (brew, cask, macOS)?"; then
