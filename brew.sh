@@ -86,7 +86,5 @@ brew install models
 brew install w3m
 brew install ack
 brew install pinentry-mac
-brew install claude
-
 # Clean it up.
 brew cleanup

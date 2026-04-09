@@ -39,6 +39,7 @@ brew install --cask whatsapp
 # Productivity                                                                #
 ###############################################################################
 
+brew install --cask granola
 brew install --cask notion
 brew install --cask fantastical
 brew install --cask moom

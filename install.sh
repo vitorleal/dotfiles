@@ -228,8 +228,9 @@ step_claude_code() {
   gum style --border normal --padding "0 1" --foreground 4 "Configuring Claude Code"
 
   if ! command -v claude &>/dev/null; then
-    gum style --foreground 3 "  Claude Code not found. Installing via Homebrew..."
-    brew install --cask claude-code
+    gum style --foreground 3 "  Claude Code not found. Installing..."
+    gum spin --spinner dot --title "Installing Claude Code..." -- \
+      bash -c 'curl -fsSL https://claude.ai/install.sh | bash'
   fi
 
   mkdir -p "$HOME/.claude"

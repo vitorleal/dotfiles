@@ -11,6 +11,9 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=/opt/homebrew/bin:$PATH
 export PATH="/opt/homebrew/sbin:$PATH"
 
+# System binaries (Docker, etc.)
+export PATH="/usr/local/bin:$PATH"
+
 # Larger bash history (allow 32^3 entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
