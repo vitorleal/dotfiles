@@ -301,6 +301,23 @@ main() {
     echo ""
   done <<< "$steps"
 
+  # Offer to re-run setup scripts
+  if gum confirm "Re-run any setup scripts (brew, cask, macOS)?"; then
+    local rerun
+    rerun=$(gum choose --no-limit \
+      "CLI Tools (brew.sh)" \
+      "GUI Apps (cask.sh)" \
+      "macOS Preferences (osx.sh)")
+
+    while IFS= read -r choice; do
+      case "$choice" in
+        "CLI Tools (brew.sh)")          step_brew_cli ;;
+        "GUI Apps (cask.sh)")           step_brew_cask ;;
+        "macOS Preferences (osx.sh)")   step_macos ;;
+      esac
+    done <<< "$rerun"
+  fi
+
   gum style \
     --border double \
     --align center \
