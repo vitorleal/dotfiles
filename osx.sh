@@ -268,11 +268,32 @@ defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 ###############################################################################
-# Energy                                                                      #
+# Display                                                                     #
+###############################################################################
+
+# Enable HiDPI display modes (retina resolution scaling)
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
+###############################################################################
+# Energy & Battery                                                            #
 ###############################################################################
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
+
+# Disable safe sleep / hibernation (faster sleep, uses only RAM)
+sudo pmset -a hibernatemode 0
+
+# Display sleep: 20 min on battery, 30 min on AC
+sudo pmset -b displaysleep 20
+sudo pmset -c displaysleep 30
+
+# Wake on LAN (AC only)
+sudo pmset -c womp 1
+sudo pmset -b womp 0
+
+# Show battery icon in menu bar
+defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -bool true
 
 ###############################################################################
 # Kill affected applications                                                  #

@@ -38,7 +38,6 @@ step_dotfiles() {
   local files=(
     ".aliases"
     ".exports"
-    ".gitconfig"
     ".gitignore"
     ".zshrc"
   )
@@ -70,6 +69,12 @@ step_dotfiles() {
 step_git_config() {
   gum style --border normal --padding "0 1" --foreground 4 "Git configuration"
 
+  # Copy .gitconfig base template if it exists
+  if [[ -f ".gitconfig" ]]; then
+    cp ".gitconfig" "$HOME/.gitconfig"
+    gum style --foreground 2 "  copied .gitconfig"
+  fi
+
   local existing_name existing_email
   existing_name=$(git config --global user.name 2>/dev/null || true)
   existing_email=$(git config --global user.email 2>/dev/null || true)
@@ -92,6 +97,11 @@ step_git_config() {
   git config --global user.email "$git_email"
 
   if gum confirm "Set up GPG signing for commits?"; then
+    if ! command -v gpg &>/dev/null; then
+      gum style --foreground 3 "  gpg not found. Installing via Homebrew..."
+      brew install gnupg
+    fi
+
     local gpg_key
     gpg_key=$(gpg --list-secret-keys --keyid-format=long 2>/dev/null \
       | grep -E 'sec\s+rsa[0-9]+/' | sed 's|.*/||' | awk '{print $1}' | head -1 || true)
@@ -309,13 +319,13 @@ main() {
       "GUI Apps (cask.sh)" \
       "macOS Preferences (osx.sh)")
 
-    while IFS= read -r choice; do
+    while IFS= read -r choice <&4; do
       case "$choice" in
         "CLI Tools (brew.sh)")          step_brew_cli ;;
         "GUI Apps (cask.sh)")           step_brew_cask ;;
         "macOS Preferences (osx.sh)")   step_macos ;;
       esac
-    done <<< "$rerun"
+    done 4<<< "$rerun"
   fi
 
   gum style \
