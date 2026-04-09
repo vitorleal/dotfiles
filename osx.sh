@@ -60,6 +60,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 # Disable automatic period with double spaces
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 
+# Hide Siri from menu bar
+defaults write com.apple.Siri StatusMenuVisible -bool false
+
 ###############################################################################
 # Trackpad, keyboard, and input                                               #
 ###############################################################################
@@ -74,6 +77,45 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
+# Disable Caps Lock on built-in keyboard (map Caps Lock to No Action)
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.0-0-0 -array \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771072</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer>
+  </dict>'
+
+# External keyboard (vendor:1241 product:1111): disable Caps Lock,
+# swap Option/Command (for non-Mac keyboard layout), Globe -> fn
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.1241-1111-0 -array \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771299</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771298</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771303</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771302</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771298</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771299</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771072</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>1095216660483</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>1095216660483</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>30064771302</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>30064771303</integer>
+  </dict>' \
+  '<dict>
+    <key>HIDKeyboardModifierMappingDst</key><integer>1095216660483</integer>
+    <key>HIDKeyboardModifierMappingSrc</key><integer>280379760050179</integer>
+  </dict>'
+
 # Set language and text formats
 defaults write NSGlobalDomain AppleLanguages -array "en" "pt-BR"
 defaults write NSGlobalDomain AppleLocale -string "en_US@currency=BRL"
@@ -82,6 +124,21 @@ defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone
 sudo systemsetup -settimezone "America/Sao_Paulo" > /dev/null
+
+###############################################################################
+# Window Management                                                           #
+###############################################################################
+
+# Disable Option-key tiling accelerator
+defaults write com.apple.WindowManager EnableTilingOptionAccelerator -bool false
+
+###############################################################################
+# Menu Bar                                                                    #
+###############################################################################
+
+# Clock: show AM/PM and day of week
+defaults write com.apple.menuextra.clock ShowAMPM -bool true
+defaults write com.apple.menuextra.clock ShowDayOfWeek -bool true
 
 ###############################################################################
 # Screen                                                                      #
@@ -124,6 +181,10 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 # Use list view in all Finder windows by default
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+# Set new Finder windows to open at Desktop
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
 
 # Disable the warning before emptying the Trash
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -170,6 +231,12 @@ defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
+
+# Don't show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
+# Disable launch animation
+defaults write com.apple.dock launchanim -bool false
 
 # Hot corners
 # Bottom left screen corner -> Desktop

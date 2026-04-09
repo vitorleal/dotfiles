@@ -56,6 +56,7 @@ brew install spaceship
 
 brew install nmap
 brew install doggo
+brew install tailscale
 
 ###############################################################################
 # Media                                                                       #

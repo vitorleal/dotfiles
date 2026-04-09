@@ -70,11 +70,23 @@ step_dotfiles() {
 step_git_config() {
   gum style --border normal --padding "0 1" --foreground 4 "Git configuration"
 
-  local git_name
-  git_name=$(gum input --placeholder "Your Git user.name" --prompt "Name: " --value "$(git config --global user.name 2>/dev/null)")
+  local existing_name existing_email
+  existing_name=$(git config --global user.name 2>/dev/null || true)
+  existing_email=$(git config --global user.email 2>/dev/null || true)
 
-  local git_email
-  git_email=$(gum input --placeholder "Your Git user.email" --prompt "Email: " --value "$(git config --global user.email 2>/dev/null)")
+  local git_name="$existing_name"
+  local git_email="$existing_email"
+
+  if [[ -n "$existing_name" && -n "$existing_email" ]]; then
+    gum style --foreground 3 "  Current: $existing_name <$existing_email>"
+    if gum confirm "Change git user/email?"; then
+      git_name=$(gum input --placeholder "Your Git user.name" --prompt "Name: " --value "$existing_name")
+      git_email=$(gum input --placeholder "Your Git user.email" --prompt "Email: " --value "$existing_email")
+    fi
+  else
+    git_name=$(gum input --placeholder "Your Git user.name" --prompt "Name: ")
+    git_email=$(gum input --placeholder "Your Git user.email" --prompt "Email: ")
+  fi
 
   git config --global user.name "$git_name"
   git config --global user.email "$git_email"
